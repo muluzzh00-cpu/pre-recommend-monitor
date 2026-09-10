@@ -1,0 +1,65 @@
+[
+  {
+    "university": "浙江大学",
+    "college": "建筑工程学院",
+    "status": "✅ 正常",
+    "fetched": 149,
+    "matched": 10,
+    "unique_matched": 10,
+    "latest": "2027年建筑工程学院招收推免生综合考核实施细则"
+  },
+  {
+    "university": "南京大学",
+    "college": "建筑与城市规划学院",
+    "status": "✅ 正常",
+    "fetched": 157,
+    "matched": 21,
+    "unique_matched": 15,
+    "latest": "2027年接收推荐免试研究生工作实施细则"
+  },
+  {
+    "university": "苏州大学",
+    "college": "金螳螂建筑学院",
+    "status": "❌ 失败",
+    "fetched": 0,
+    "matched": 0,
+    "unique_matched": 0,
+    "latest": null
+  },
+  {
+    "university": "湖南大学",
+    "college": "建筑与规划学院",
+    "status": "⚠️ 部分正常",
+    "fetched": 165,
+    "matched": 1,
+    "unique_matched": 1,
+    "latest": "湖南大学建筑与规划学院推荐2027年优秀应届本科毕业生免试攻读硕士学位研究生工作细则"
+  },
+  {
+    "university": "华南理工大学",
+    "college": "建筑学院",
+    "status": "✅ 正常",
+    "fetched": 165,
+    "matched": 6,
+    "unique_matched": 5,
+    "latest": "关于公布建筑学院2026年第二批博士研究生复试成绩查询及师生双选的通知"
+  },
+  {
+    "university": "天津大学",
+    "college": "建筑工程学院",
+    "status": "⚠️ 部分正常",
+    "fetched": 183,
+    "matched": 9,
+    "unique_matched": 8,
+    "latest": "2026年（2027届）建筑工程学院推荐优秀应届本科毕业生免试攻读研究生名单公示"
+  },
+  {
+    "university": "武汉大学",
+    "college": "城市设计学院",
+    "status": "⚠️ 部分正常",
+    "fetched": 130,
+    "matched": 2,
+    "unique_matched": 2,
+    "latest": "09月 02 城市设计学院2027年接收攻读硕士学位推免生预报名的通知"
+  }
+]

@@ -1,0 +1,38 @@
+2026-09-11 00:30:23,484 INFO zju-1 fetched=42 matched=7 ok=True
+2026-09-11 00:30:27,081 INFO zju-2 fetched=30 matched=0 ok=True
+2026-09-11 00:30:33,181 INFO zju-3 fetched=41 matched=2 ok=True
+2026-09-11 00:30:37,991 INFO zju-4 fetched=36 matched=1 ok=True
+2026-09-11 00:30:53,684 INFO nju-1 fetched=43 matched=3 ok=True
+2026-09-11 00:30:59,672 INFO nju-2 fetched=13 matched=2 ok=True
+2026-09-11 00:31:06,936 INFO nju-3 fetched=21 matched=4 ok=True
+2026-09-11 00:31:17,758 INFO nju-4 fetched=39 matched=6 ok=True
+2026-09-11 00:31:28,553 INFO nju-5 fetched=41 matched=6 ok=True
+2026-09-11 00:31:46,623 WARNING suda-1: ConnectionError: ('Connection aborted.', ConnectionResetError(10054, '远程主机强迫关闭了一个现有的连接。', None, 10054, None))
+2026-09-11 00:31:46,623 INFO suda-1 fetched=0 matched=0 ok=False
+2026-09-11 00:32:04,685 WARNING suda-2: ConnectionError: ('Connection aborted.', ConnectionResetError(10054, '远程主机强迫关闭了一个现有的连接。', None, 10054, None))
+2026-09-11 00:32:04,685 INFO suda-2 fetched=0 matched=0 ok=False
+2026-09-11 00:32:22,756 WARNING suda-3: ConnectionError: ('Connection aborted.', ConnectionResetError(10054, '远程主机强迫关闭了一个现有的连接。', None, 10054, None))
+2026-09-11 00:32:22,756 INFO suda-3 fetched=0 matched=0 ok=False
+2026-09-11 00:32:40,818 WARNING suda-4: ConnectionError: ('Connection aborted.', ConnectionResetError(10054, '远程主机强迫关闭了一个现有的连接。', None, 10054, None))
+2026-09-11 00:32:40,818 INFO suda-4 fetched=0 matched=0 ok=False
+2026-09-11 00:32:45,723 INFO hnu-1 fetched=31 matched=1 ok=True
+2026-09-11 00:32:46,893 INFO hnu-2 fetched=2 matched=0 ok=True
+2026-09-11 00:32:50,546 INFO hnu-3 fetched=42 matched=0 ok=True
+2026-09-11 00:32:54,138 INFO hnu-4 fetched=45 matched=0 ok=True
+2026-09-11 00:32:57,759 INFO hnu-5 fetched=45 matched=0 ok=True
+2026-09-11 00:33:00,224 INFO scut-1 fetched=26 matched=0 ok=True
+2026-09-11 00:33:06,235 INFO scut-2 fetched=35 matched=3 ok=True
+2026-09-11 00:33:09,840 INFO scut-3 fetched=33 matched=0 ok=True
+2026-09-11 00:33:15,912 INFO scut-4 fetched=36 matched=2 ok=True
+2026-09-11 00:33:20,692 INFO scut-5 fetched=35 matched=1 ok=True
+2026-09-11 00:33:25,605 INFO tju-1 fetched=60 matched=1 ok=True
+2026-09-11 00:33:30,427 INFO tju-2 fetched=60 matched=2 ok=True
+2026-09-11 00:33:35,437 INFO tju-3 fetched=21 matched=3 ok=True
+2026-09-11 00:33:37,792 INFO tju-4 fetched=21 matched=1 ok=True
+2026-09-11 00:33:42,576 INFO tju-5 fetched=21 matched=2 ok=True
+2026-09-11 00:33:49,842 INFO whu-1 fetched=45 matched=1 ok=True
+2026-09-11 00:33:51,082 INFO whu-2 fetched=1 matched=0 ok=True
+2026-09-11 00:33:52,283 INFO whu-3 fetched=3 matched=0 ok=True
+2026-09-11 00:33:55,887 INFO whu-4 fetched=24 matched=0 ok=True
+2026-09-11 00:33:58,290 INFO whu-5 fetched=12 matched=0 ok=True
+2026-09-11 00:34:01,942 INFO whu-6 fetched=45 matched=1 ok=True

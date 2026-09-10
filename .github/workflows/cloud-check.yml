@@ -1,0 +1,54 @@
+name: Cloud crawl acceptance
+on:
+  workflow_dispatch:
+permissions:
+  contents: read
+concurrency:
+  group: cloud-crawl-acceptance
+  cancel-in-progress: false
+jobs:
+  acceptance:
+    runs-on: ubuntu-latest
+    timeout-minutes: 45
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - name: Check monitoring period
+        id: window
+        run: python scripts/window_gate.py >> "$GITHUB_OUTPUT"
+      - name: Install dependencies
+        if: steps.window.outputs.active == 'true'
+        run: pip install -r requirements.txt
+      - name: First cloud crawl with simulated email
+        if: steps.window.outputs.active == 'true'
+        continue-on-error: true
+        run: python main.py --run-once --console --state-dir cloud-test-state --report-dir logs/cloud-first
+      - name: Second cloud crawl restoring test state
+        if: steps.window.outputs.active == 'true'
+        continue-on-error: true
+        run: python main.py --run-once --console --state-dir cloud-test-state --report-dir logs/cloud-second
+      - name: Verify cloud results
+        if: steps.window.outputs.active == 'true'
+        run: |
+          python - <<'PY'
+          import json
+          from pathlib import Path
+          first=json.loads(Path('logs/cloud-first/latest.json').read_text())
+          second=json.loads(Path('logs/cloud-second/latest.json').read_text())
+          for label,r in [('first',first),('second',second)]:
+              print(label, 'new_or_updated=',r['new_or_updated'], 'pending_new_events=',r['pending_new_events'])
+              for key,h in r['health'].items():
+                  print(key, 'OK' if h['ok'] else 'FAILED', h.get('error',''))
+          if second['pending_new_events']:
+              raise SystemExit('New/updated events found on second run; inspect whether the source changed or deduplication failed.')
+          if not all(h['ok'] for h in second['health'].values()):
+              raise SystemExit('Cloud crawling has failed pages; see uploaded reports.')
+          PY
+      - uses: actions/upload-artifact@v4
+        if: always() && steps.window.outputs.active == 'true'
+        with:
+          name: cloud-crawl-report-${{ github.run_number }}
+          path: logs/
+          retention-days: 30

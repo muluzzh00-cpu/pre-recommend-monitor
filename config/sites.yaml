@@ -1,0 +1,683 @@
+sites:
+- id: zju-1
+  university: 浙江大学
+  college: 建筑工程学院
+  page_name: 研究生招生
+  list_url: http://www.ccea.zju.edu.cn/18473/list.htm
+  domain: www.ccea.zju.edu.cn
+  university_domain: zju.edu.cn
+  page_type: notice_list
+  source_level: college
+  title_selector: self
+  date_selector: .news_meta, .date, .time, span
+  link_selector: a[href]
+  article_url_pattern: /info/\d+/\d+\.htm|/i\d+\.html|/page\.(?:htm|psp)|/t\d+_\d+\.(?:html|htm)|/_upload/.*\.pdf
+  crawler_type: generic
+  enabled: true
+  content_selector: '.wp_articlecontent, .v_news_content, #vsb_content, .article-content,
+    .articleContent, article'
+  verification_status: passed
+  verified_at: '2026-09-11T00:35:32.040661+08:00'
+  verification_notes: 列表标题及链接可读取；详情按需进入
+- id: zju-2
+  university: 浙江大学
+  college: 建筑工程学院
+  page_name: 学院通知
+  list_url: http://www.ccea.zju.edu.cn/xytz/list.htm
+  domain: www.ccea.zju.edu.cn
+  university_domain: zju.edu.cn
+  page_type: notice_list
+  source_level: college
+  title_selector: self
+  date_selector: .news_meta, .date, .time, span
+  link_selector: a[href]
+  article_url_pattern: /info/\d+/\d+\.htm|/i\d+\.html|/page\.(?:htm|psp)|/t\d+_\d+\.(?:html|htm)|/_upload/.*\.pdf
+  crawler_type: generic
+  enabled: true
+  content_selector: '.wp_articlecontent, .v_news_content, #vsb_content, .article-content,
+    .articleContent, article'
+  verification_status: passed
+  verified_at: '2026-09-11T00:35:32.040661+08:00'
+  verification_notes: 列表标题及链接可读取；详情按需进入
+- id: zju-3
+  university: 浙江大学
+  college: 建筑工程学院
+  page_name: 硕士招生
+  list_url: http://www.grs.zju.edu.cn/yjszs/28470/list.htm
+  domain: www.grs.zju.edu.cn
+  university_domain: zju.edu.cn
+  page_type: notice_list
+  source_level: university
+  title_selector: self
+  date_selector: .news_meta, .date, .time, span
+  link_selector: a[href]
+  article_url_pattern: /info/\d+/\d+\.htm|/i\d+\.html|/page\.(?:htm|psp)|/t\d+_\d+\.(?:html|htm)|/_upload/.*\.pdf
+  crawler_type: generic
+  enabled: true
+  content_selector: '.wp_articlecontent, .v_news_content, #vsb_content, .article-content,
+    .articleContent, article'
+  verification_status: passed
+  verified_at: '2026-09-11T00:35:32.040661+08:00'
+  verification_notes: 列表标题及链接可读取；详情按需进入
+- id: zju-4
+  university: 浙江大学
+  college: 建筑工程学院
+  page_name: 博士最新通知
+  list_url: http://www.grs.zju.edu.cn/yjszs/28499/list.htm
+  domain: www.grs.zju.edu.cn
+  university_domain: zju.edu.cn
+  page_type: notice_list
+  source_level: university
+  title_selector: self
+  date_selector: .news_meta, .date, .time, span
+  link_selector: a[href]
+  article_url_pattern: /info/\d+/\d+\.htm|/i\d+\.html|/page\.(?:htm|psp)|/t\d+_\d+\.(?:html|htm)|/_upload/.*\.pdf
+  crawler_type: generic
+  enabled: true
+  content_selector: '.wp_articlecontent, .v_news_content, #vsb_content, .article-content,
+    .articleContent, article'
+  verification_status: passed
+  verified_at: '2026-09-11T00:35:32.040661+08:00'
+  verification_notes: 列表标题及链接可读取；详情按需进入
+- id: nju-1
+  university: 南京大学
+  college: 建筑与城市规划学院
+  page_name: 研究生招生
+  list_url: https://arch.nju.edu.cn/rcpy/yjs/pyfa/index.html
+  domain: arch.nju.edu.cn
+  university_domain: nju.edu.cn
+  page_type: embedded_json_list
+  source_level: college
+  title_selector: self
+  date_selector: .news_meta, .date, .time, span
+  link_selector: a[href]
+  article_url_pattern: /info/\d+/\d+\.htm|/i\d+\.html|/page\.(?:htm|psp)|/t\d+_\d+\.(?:html|htm)|/_upload/.*\.pdf
+  crawler_type: nju
+  enabled: true
+  content_selector: '#word'
+  verification_status: passed
+  verified_at: '2026-09-11T00:35:32.040661+08:00'
+  verification_notes: 列表标题及链接可读取；详情按需进入
+- id: nju-2
+  university: 南京大学
+  college: 建筑与城市规划学院
+  page_name: 通知公告
+  list_url: https://arch.nju.edu.cn/sy/tzgg/index.html
+  domain: arch.nju.edu.cn
+  university_domain: nju.edu.cn
+  page_type: embedded_json_list
+  source_level: college
+  title_selector: self
+  date_selector: .news_meta, .date, .time, span
+  link_selector: a[href]
+  article_url_pattern: /info/\d+/\d+\.htm|/i\d+\.html|/page\.(?:htm|psp)|/t\d+_\d+\.(?:html|htm)|/_upload/.*\.pdf
+  crawler_type: nju
+  enabled: true
+  content_selector: '#word'
+  verification_status: passed
+  verified_at: '2026-09-11T00:35:32.040661+08:00'
+  verification_notes: 列表标题及链接可读取；详情按需进入
+- id: nju-3
+  university: 南京大学
+  college: 建筑与城市规划学院
+  page_name: 夏令营/推免
+  list_url: https://yzb.nju.edu.cn/xlyxx/list.htm
+  domain: yzb.nju.edu.cn
+  university_domain: nju.edu.cn
+  page_type: notice_list
+  source_level: university
+  title_selector: self
+  date_selector: .news_meta, .date, .time, span
+  link_selector: a[href]
+  article_url_pattern: /info/\d+/\d+\.htm|/i\d+\.html|/page\.(?:htm|psp)|/t\d+_\d+\.(?:html|htm)|/_upload/.*\.pdf
+  crawler_type: generic
+  enabled: true
+  content_selector: '.wp_articlecontent, .v_news_content, #vsb_content, .article-content,
+    .articleContent, article'
+  verification_status: passed
+  verified_at: '2026-09-11T00:35:32.040661+08:00'
+  verification_notes: 列表标题及链接可读取；详情按需进入
+- id: nju-4
+  university: 南京大学
+  college: 建筑与城市规划学院
+  page_name: 硕士最新通知
+  list_url: https://yzb.nju.edu.cn/47863/list.htm
+  domain: yzb.nju.edu.cn
+  university_domain: nju.edu.cn
+  page_type: notice_list
+  source_level: university
+  title_selector: self
+  date_selector: .news_meta, .date, .time, span
+  link_selector: a[href]
+  article_url_pattern: /info/\d+/\d+\.htm|/i\d+\.html|/page\.(?:htm|psp)|/t\d+_\d+\.(?:html|htm)|/_upload/.*\.pdf
+  crawler_type: generic
+  enabled: true
+  content_selector: '.wp_articlecontent, .v_news_content, #vsb_content, .article-content,
+    .articleContent, article'
+  verification_status: passed
+  verified_at: '2026-09-11T00:35:32.040661+08:00'
+  verification_notes: 列表标题及链接可读取；详情按需进入
+- id: nju-5
+  university: 南京大学
+  college: 建筑与城市规划学院
+  page_name: 博士最新通知
+  list_url: https://yzb.nju.edu.cn/47865/list.htm
+  domain: yzb.nju.edu.cn
+  university_domain: nju.edu.cn
+  page_type: notice_list
+  source_level: university
+  title_selector: self
+  date_selector: .news_meta, .date, .time, span
+  link_selector: a[href]
+  article_url_pattern: /info/\d+/\d+\.htm|/i\d+\.html|/page\.(?:htm|psp)|/t\d+_\d+\.(?:html|htm)|/_upload/.*\.pdf
+  crawler_type: generic
+  enabled: true
+  content_selector: '.wp_articlecontent, .v_news_content, #vsb_content, .article-content,
+    .articleContent, article'
+  verification_status: passed
+  verified_at: '2026-09-11T00:35:32.040661+08:00'
+  verification_notes: 列表标题及链接可读取；详情按需进入
+- id: suda-1
+  university: 苏州大学
+  college: 金螳螂建筑学院
+  page_name: 通知公告
+  list_url: https://arch.suda.edu.cn/5572/list.htm
+  domain: arch.suda.edu.cn
+  university_domain: suda.edu.cn
+  page_type: notice_list
+  source_level: college
+  title_selector: self
+  date_selector: .news_meta, .date, .time, span
+  link_selector: a[href]
+  article_url_pattern: /info/\d+/\d+\.htm|/i\d+\.html|/page\.(?:htm|psp)|/t\d+_\d+\.(?:html|htm)|/_upload/.*\.pdf
+  crawler_type: generic
+  enabled: true
+  content_selector: '.wp_articlecontent, .v_news_content, #vsb_content, .article-content,
+    .articleContent, article'
+  verification_status: failed
+  verified_at: '2026-09-11T00:35:32.040661+08:00'
+  verification_notes: 'ConnectionError: (''Connection aborted.'', ConnectionResetError(10054,
+    ''远程主机强迫关闭了一个现有的连接。'', None, 10054, None))'
+- id: suda-2
+  university: 苏州大学
+  college: 金螳螂建筑学院
+  page_name: 招生工作
+  list_url: https://yjs.suda.edu.cn/8365/list.htm
+  domain: yjs.suda.edu.cn
+  university_domain: suda.edu.cn
+  page_type: notice_list
+  source_level: university
+  title_selector: self
+  date_selector: .news_meta, .date, .time, span
+  link_selector: a[href]
+  article_url_pattern: /info/\d+/\d+\.htm|/i\d+\.html|/page\.(?:htm|psp)|/t\d+_\d+\.(?:html|htm)|/_upload/.*\.pdf
+  crawler_type: generic
+  enabled: true
+  content_selector: '.wp_articlecontent, .v_news_content, #vsb_content, .article-content,
+    .articleContent, article'
+  verification_status: failed
+  verified_at: '2026-09-11T00:35:32.040661+08:00'
+  verification_notes: 'ConnectionError: (''Connection aborted.'', ConnectionResetError(10054,
+    ''远程主机强迫关闭了一个现有的连接。'', None, 10054, None))'
+- id: suda-3
+  university: 苏州大学
+  college: 金螳螂建筑学院
+  page_name: 硕士招生
+  list_url: https://yjs.suda.edu.cn/8386/list.htm
+  domain: yjs.suda.edu.cn
+  university_domain: suda.edu.cn
+  page_type: notice_list
+  source_level: university
+  title_selector: self
+  date_selector: .news_meta, .date, .time, span
+  link_selector: a[href]
+  article_url_pattern: /info/\d+/\d+\.htm|/i\d+\.html|/page\.(?:htm|psp)|/t\d+_\d+\.(?:html|htm)|/_upload/.*\.pdf
+  crawler_type: generic
+  enabled: true
+  content_selector: '.wp_articlecontent, .v_news_content, #vsb_content, .article-content,
+    .articleContent, article'
+  verification_status: failed
+  verified_at: '2026-09-11T00:35:32.040661+08:00'
+  verification_notes: 'ConnectionError: (''Connection aborted.'', ConnectionResetError(10054,
+    ''远程主机强迫关闭了一个现有的连接。'', None, 10054, None))'
+- id: suda-4
+  university: 苏州大学
+  college: 金螳螂建筑学院
+  page_name: 博士招生
+  list_url: https://yjs.suda.edu.cn/8385/list.htm
+  domain: yjs.suda.edu.cn
+  university_domain: suda.edu.cn
+  page_type: notice_list
+  source_level: university
+  title_selector: self
+  date_selector: .news_meta, .date, .time, span
+  link_selector: a[href]
+  article_url_pattern: /info/\d+/\d+\.htm|/i\d+\.html|/page\.(?:htm|psp)|/t\d+_\d+\.(?:html|htm)|/_upload/.*\.pdf
+  crawler_type: generic
+  enabled: true
+  content_selector: '.wp_articlecontent, .v_news_content, #vsb_content, .article-content,
+    .articleContent, article'
+  verification_status: failed
+  verified_at: '2026-09-11T00:35:32.040661+08:00'
+  verification_notes: 'ConnectionError: (''Connection aborted.'', ConnectionResetError(10054,
+    ''远程主机强迫关闭了一个现有的连接。'', None, 10054, None))；博士栏目路径尚未成功读取，需在云端复核'
+- id: hnu-1
+  university: 湖南大学
+  college: 建筑与规划学院
+  page_name: 通知公告
+  list_url: https://arch.hnu.edu.cn/index/sy/tzgg.htm
+  domain: arch.hnu.edu.cn
+  university_domain: hnu.edu.cn
+  page_type: notice_list
+  source_level: college
+  title_selector: self
+  date_selector: .news_meta, .date, .time, span
+  link_selector: a[href]
+  article_url_pattern: /info/\d+/\d+\.htm|/i\d+\.html|/page\.(?:htm|psp)|/t\d+_\d+\.(?:html|htm)|/_upload/.*\.pdf
+  crawler_type: generic
+  enabled: true
+  content_selector: '.wp_articlecontent, .v_news_content, #vsb_content, .article-content,
+    .articleContent, article'
+  verification_status: passed_with_warnings
+  verified_at: '2026-09-11T00:35:32.040661+08:00'
+  verification_notes: 1条缺少可确认的发布时间
+- id: hnu-2
+  university: 湖南大学
+  college: 建筑与规划学院
+  page_name: 研究生招生工作
+  list_url: https://arch.hnu.edu.cn/index/jyjx/yjsjy/zsgz.htm
+  domain: arch.hnu.edu.cn
+  university_domain: hnu.edu.cn
+  page_type: notice_list
+  source_level: college
+  title_selector: self
+  date_selector: .news_meta, .date, .time, span
+  link_selector: a[href]
+  article_url_pattern: /info/\d+/\d+\.htm|/i\d+\.html|/page\.(?:htm|psp)|/t\d+_\d+\.(?:html|htm)|/_upload/.*\.pdf
+  crawler_type: generic
+  enabled: true
+  content_selector: '.wp_articlecontent, .v_news_content, #vsb_content, .article-content,
+    .articleContent, article'
+  verification_status: passed_with_warnings
+  verified_at: '2026-09-11T00:35:32.040661+08:00'
+  verification_notes: 1条缺少可确认的发布时间；栏目最新通知较旧，仅作补充，主要监控通知公告
+- id: hnu-3
+  university: 湖南大学
+  college: 建筑与规划学院
+  page_name: 招生简章
+  list_url: https://gra.hnu.edu.cn/zsxx/zsjz.htm
+  domain: gra.hnu.edu.cn
+  university_domain: hnu.edu.cn
+  page_type: notice_list
+  source_level: university
+  title_selector: self
+  date_selector: .news_meta, .date, .time, span
+  link_selector: a[href]
+  article_url_pattern: /info/\d+/\d+\.htm|/i\d+\.html|/page\.(?:htm|psp)|/t\d+_\d+\.(?:html|htm)|/_upload/.*\.pdf
+  crawler_type: generic
+  enabled: true
+  content_selector: '.wp_articlecontent, .v_news_content, #vsb_content, .article-content,
+    .articleContent, article'
+  verification_status: passed
+  verified_at: '2026-09-11T00:35:32.040661+08:00'
+  verification_notes: 列表标题及链接可读取；详情按需进入
+- id: hnu-4
+  university: 湖南大学
+  college: 建筑与规划学院
+  page_name: 硕士招生
+  list_url: https://gra.hnu.edu.cn/zsxx/sszs.htm
+  domain: gra.hnu.edu.cn
+  university_domain: hnu.edu.cn
+  page_type: notice_list
+  source_level: university
+  title_selector: self
+  date_selector: .news_meta, .date, .time, span
+  link_selector: a[href]
+  article_url_pattern: /info/\d+/\d+\.htm|/i\d+\.html|/page\.(?:htm|psp)|/t\d+_\d+\.(?:html|htm)|/_upload/.*\.pdf
+  crawler_type: generic
+  enabled: true
+  content_selector: '.wp_articlecontent, .v_news_content, #vsb_content, .article-content,
+    .articleContent, article'
+  verification_status: passed
+  verified_at: '2026-09-11T00:35:32.040661+08:00'
+  verification_notes: 列表标题及链接可读取；详情按需进入
+- id: hnu-5
+  university: 湖南大学
+  college: 建筑与规划学院
+  page_name: 博士招生
+  list_url: https://gra.hnu.edu.cn/zsxx/bszs.htm
+  domain: gra.hnu.edu.cn
+  university_domain: hnu.edu.cn
+  page_type: notice_list
+  source_level: university
+  title_selector: self
+  date_selector: .news_meta, .date, .time, span
+  link_selector: a[href]
+  article_url_pattern: /info/\d+/\d+\.htm|/i\d+\.html|/page\.(?:htm|psp)|/t\d+_\d+\.(?:html|htm)|/_upload/.*\.pdf
+  crawler_type: generic
+  enabled: true
+  content_selector: '.wp_articlecontent, .v_news_content, #vsb_content, .article-content,
+    .articleContent, article'
+  verification_status: passed
+  verified_at: '2026-09-11T00:35:32.040661+08:00'
+  verification_notes: 列表标题及链接可读取；详情按需进入
+- id: scut-1
+  university: 华南理工大学
+  college: 建筑学院
+  page_name: 公务通知
+  list_url: https://www2.scut.edu.cn/architecture/gwxx/list.htm
+  domain: www2.scut.edu.cn
+  university_domain: scut.edu.cn
+  page_type: notice_list
+  source_level: college
+  title_selector: self
+  date_selector: .news_meta, .date, .time, span
+  link_selector: a[href]
+  article_url_pattern: /info/\d+/\d+\.htm|/i\d+\.html|/page\.(?:htm|psp)|/t\d+_\d+\.(?:html|htm)|/_upload/.*\.pdf
+  crawler_type: generic
+  enabled: true
+  content_selector: '.wp_articlecontent, .v_news_content, #vsb_content, .article-content,
+    .articleContent, article'
+  verification_status: passed
+  verified_at: '2026-09-11T00:35:32.040661+08:00'
+  verification_notes: 列表标题及链接可读取；详情按需进入
+- id: scut-2
+  university: 华南理工大学
+  college: 建筑学院
+  page_name: 研究生培养招生
+  list_url: https://www2.scut.edu.cn/architecture/yjsjyyxwpy/list.htm
+  domain: www2.scut.edu.cn
+  university_domain: scut.edu.cn
+  page_type: notice_list
+  source_level: college
+  title_selector: self
+  date_selector: .news_meta, .date, .time, span
+  link_selector: a[href]
+  article_url_pattern: /info/\d+/\d+\.htm|/i\d+\.html|/page\.(?:htm|psp)|/t\d+_\d+\.(?:html|htm)|/_upload/.*\.pdf
+  crawler_type: generic
+  enabled: true
+  content_selector: '.wp_articlecontent, .v_news_content, #vsb_content, .article-content,
+    .articleContent, article'
+  verification_status: passed
+  verified_at: '2026-09-11T00:35:32.040661+08:00'
+  verification_notes: 列表标题及链接可读取；详情按需进入
+- id: scut-3
+  university: 华南理工大学
+  college: 建筑学院
+  page_name: 研究生教育通知
+  list_url: https://www2.scut.edu.cn/architecture/yjs/list.htm
+  domain: www2.scut.edu.cn
+  university_domain: scut.edu.cn
+  page_type: notice_list
+  source_level: college
+  title_selector: self
+  date_selector: .news_meta, .date, .time, span
+  link_selector: a[href]
+  article_url_pattern: /info/\d+/\d+\.htm|/i\d+\.html|/page\.(?:htm|psp)|/t\d+_\d+\.(?:html|htm)|/_upload/.*\.pdf
+  crawler_type: generic
+  enabled: true
+  content_selector: '.wp_articlecontent, .v_news_content, #vsb_content, .article-content,
+    .articleContent, article'
+  verification_status: passed
+  verified_at: '2026-09-11T00:35:32.040661+08:00'
+  verification_notes: 列表标题及链接可读取；详情按需进入
+- id: scut-4
+  university: 华南理工大学
+  college: 建筑学院
+  page_name: 硕士招生
+  list_url: https://yz.scut.edu.cn/sszs/list.htm
+  domain: yz.scut.edu.cn
+  university_domain: scut.edu.cn
+  page_type: notice_list
+  source_level: university
+  title_selector: self
+  date_selector: .news_meta, .date, .time, span
+  link_selector: a[href]
+  article_url_pattern: /info/\d+/\d+\.htm|/i\d+\.html|/page\.(?:htm|psp)|/t\d+_\d+\.(?:html|htm)|/_upload/.*\.pdf
+  crawler_type: generic
+  enabled: true
+  content_selector: '.wp_articlecontent, .v_news_content, #vsb_content, .article-content,
+    .articleContent, article'
+  verification_status: passed
+  verified_at: '2026-09-11T00:35:32.040661+08:00'
+  verification_notes: 列表标题及链接可读取；详情按需进入
+- id: scut-5
+  university: 华南理工大学
+  college: 建筑学院
+  page_name: 博士招生
+  list_url: https://yz.scut.edu.cn/bszs/list.htm
+  domain: yz.scut.edu.cn
+  university_domain: scut.edu.cn
+  page_type: notice_list
+  source_level: university
+  title_selector: self
+  date_selector: .news_meta, .date, .time, span
+  link_selector: a[href]
+  article_url_pattern: /info/\d+/\d+\.htm|/i\d+\.html|/page\.(?:htm|psp)|/t\d+_\d+\.(?:html|htm)|/_upload/.*\.pdf
+  crawler_type: generic
+  enabled: true
+  content_selector: '.wp_articlecontent, .v_news_content, #vsb_content, .article-content,
+    .articleContent, article'
+  verification_status: passed
+  verified_at: '2026-09-11T00:35:32.040661+08:00'
+  verification_notes: 列表标题及链接可读取；详情按需进入
+- id: tju-1
+  university: 天津大学
+  college: 建筑工程学院
+  page_name: 研究生通知公告
+  list_url: https://jgxy.tju.edu.cn/jyjx/yjsjy/tzgg.htm
+  domain: jgxy.tju.edu.cn
+  university_domain: tju.edu.cn
+  page_type: notice_list
+  source_level: college
+  title_selector: self
+  date_selector: .news_meta, .date, .time, span
+  link_selector: a[href]
+  article_url_pattern: /info/\d+/\d+\.htm|/i\d+\.html|/page\.(?:htm|psp)|/t\d+_\d+\.(?:html|htm)|/_upload/.*\.pdf
+  crawler_type: generic
+  enabled: true
+  content_selector: '.wp_articlecontent, .v_news_content, #vsb_content, .article-content,
+    .articleContent, article, .TRS_Editor'
+  verification_status: passed_with_warnings
+  verified_at: '2026-09-11T00:35:32.040661+08:00'
+  verification_notes: 59条缺少可确认的发布时间
+- id: tju-2
+  university: 天津大学
+  college: 建筑工程学院
+  page_name: 学院通知公告
+  list_url: https://jgxy.tju.edu.cn/tzgg.htm
+  domain: jgxy.tju.edu.cn
+  university_domain: tju.edu.cn
+  page_type: notice_list
+  source_level: college
+  title_selector: self
+  date_selector: .news_meta, .date, .time, span
+  link_selector: a[href]
+  article_url_pattern: /info/\d+/\d+\.htm|/i\d+\.html|/page\.(?:htm|psp)|/t\d+_\d+\.(?:html|htm)|/_upload/.*\.pdf
+  crawler_type: generic
+  enabled: true
+  content_selector: '.wp_articlecontent, .v_news_content, #vsb_content, .article-content,
+    .articleContent, article, .TRS_Editor'
+  verification_status: passed_with_warnings
+  verified_at: '2026-09-11T00:35:32.040661+08:00'
+  verification_notes: 58条缺少可确认的发布时间
+- id: tju-3
+  university: 天津大学
+  college: 建筑工程学院
+  page_name: 硕士招生通知
+  list_url: https://yzb.tju.edu.cn/xwzx/tkss_xw/
+  domain: yzb.tju.edu.cn
+  university_domain: tju.edu.cn
+  page_type: notice_list
+  source_level: university
+  title_selector: self
+  date_selector: .news_meta, .date, .time, span
+  link_selector: a[href]
+  article_url_pattern: /info/\d+/\d+\.htm|/i\d+\.html|/page\.(?:htm|psp)|/t\d+_\d+\.(?:html|htm)|/_upload/.*\.pdf
+  crawler_type: generic
+  enabled: true
+  content_selector: '.wp_articlecontent, .v_news_content, #vsb_content, .article-content,
+    .articleContent, article, .TRS_Editor'
+  verification_status: passed_with_warnings
+  verified_at: '2026-09-11T00:35:32.040661+08:00'
+  verification_notes: 18条缺少可确认的发布时间
+- id: tju-4
+  university: 天津大学
+  college: 建筑工程学院
+  page_name: 博士招生通知
+  list_url: https://yzb.tju.edu.cn/xwzx/tkbs_xw/
+  domain: yzb.tju.edu.cn
+  university_domain: tju.edu.cn
+  page_type: notice_list
+  source_level: university
+  title_selector: self
+  date_selector: .news_meta, .date, .time, span
+  link_selector: a[href]
+  article_url_pattern: /info/\d+/\d+\.htm|/i\d+\.html|/page\.(?:htm|psp)|/t\d+_\d+\.(?:html|htm)|/_upload/.*\.pdf
+  crawler_type: generic
+  enabled: true
+  content_selector: '.wp_articlecontent, .v_news_content, #vsb_content, .article-content,
+    .articleContent, article, .TRS_Editor'
+  verification_status: passed_with_warnings
+  verified_at: '2026-09-11T00:35:32.040661+08:00'
+  verification_notes: 20条缺少可确认的发布时间
+- id: tju-5
+  university: 天津大学
+  college: 建筑工程学院
+  page_name: 最新消息
+  list_url: https://yzb.tju.edu.cn/xwzx/zxxx/
+  domain: yzb.tju.edu.cn
+  university_domain: tju.edu.cn
+  page_type: notice_list
+  source_level: university
+  title_selector: self
+  date_selector: .news_meta, .date, .time, span
+  link_selector: a[href]
+  article_url_pattern: /info/\d+/\d+\.htm|/i\d+\.html|/page\.(?:htm|psp)|/t\d+_\d+\.(?:html|htm)|/_upload/.*\.pdf
+  crawler_type: generic
+  enabled: true
+  content_selector: '.wp_articlecontent, .v_news_content, #vsb_content, .article-content,
+    .articleContent, article, .TRS_Editor'
+  verification_status: passed_with_warnings
+  verified_at: '2026-09-11T00:35:32.040661+08:00'
+  verification_notes: 18条缺少可确认的发布时间
+- id: whu-1
+  university: 武汉大学
+  college: 城市设计学院
+  page_name: 通知公告
+  list_url: https://sud.whu.edu.cn/lmdh/tzgg/tz.htm
+  domain: sud.whu.edu.cn
+  university_domain: whu.edu.cn
+  page_type: notice_list
+  source_level: college
+  title_selector: self
+  date_selector: .news_meta, .date, .time, span
+  link_selector: a[href]
+  article_url_pattern: /info/\d+/\d+\.htm|/i\d+\.html|/page\.(?:htm|psp)|/t\d+_\d+\.(?:html|htm)|/_upload/.*\.pdf
+  crawler_type: generic
+  enabled: true
+  content_selector: '.wp_articlecontent, .v_news_content, #vsb_content, .article-content,
+    .articleContent, article'
+  verification_status: passed_with_warnings
+  verified_at: '2026-09-11T00:35:32.040661+08:00'
+  verification_notes: 42条缺少可确认的发布时间
+- id: whu-2
+  university: 武汉大学
+  college: 城市设计学院
+  page_name: 推免生
+  list_url: https://wdyz.whu.edu.cn/sszs/tms.htm
+  domain: wdyz.whu.edu.cn
+  university_domain: whu.edu.cn
+  page_type: notice_list
+  source_level: university
+  title_selector: self
+  date_selector: .news_meta, .date, .time, span
+  link_selector: a[href]
+  article_url_pattern: /info/\d+/\d+\.htm|/i\d+\.html|/page\.(?:htm|psp)|/t\d+_\d+\.(?:html|htm)|/_upload/.*\.pdf
+  crawler_type: generic
+  enabled: true
+  content_selector: '.wp_articlecontent, .v_news_content, #vsb_content, .article-content,
+    .articleContent, article'
+  verification_status: passed
+  verified_at: '2026-09-11T00:35:32.040661+08:00'
+  verification_notes: 列表标题及链接可读取；详情按需进入
+- id: whu-3
+  university: 武汉大学
+  college: 城市设计学院
+  page_name: 博士招生动态
+  list_url: https://wdyz.whu.edu.cn/bszs/zsdt.htm
+  domain: wdyz.whu.edu.cn
+  university_domain: whu.edu.cn
+  page_type: notice_list
+  source_level: university
+  title_selector: self
+  date_selector: .news_meta, .date, .time, span
+  link_selector: a[href]
+  article_url_pattern: /info/\d+/\d+\.htm|/i\d+\.html|/page\.(?:htm|psp)|/t\d+_\d+\.(?:html|htm)|/_upload/.*\.pdf
+  crawler_type: generic
+  enabled: true
+  content_selector: '.wp_articlecontent, .v_news_content, #vsb_content, .article-content,
+    .articleContent, article'
+  verification_status: passed
+  verified_at: '2026-09-11T00:35:32.040661+08:00'
+  verification_notes: 列表标题及链接可读取；详情按需进入
+- id: whu-4
+  university: 武汉大学
+  college: 城市设计学院
+  page_name: 普通硕士
+  list_url: https://wdyz.whu.edu.cn/sszs/ptss.htm
+  domain: wdyz.whu.edu.cn
+  university_domain: whu.edu.cn
+  page_type: notice_list
+  source_level: university
+  title_selector: self
+  date_selector: .news_meta, .date, .time, span
+  link_selector: a[href]
+  article_url_pattern: /info/\d+/\d+\.htm|/i\d+\.html|/page\.(?:htm|psp)|/t\d+_\d+\.(?:html|htm)|/_upload/.*\.pdf
+  crawler_type: generic
+  enabled: true
+  content_selector: '.wp_articlecontent, .v_news_content, #vsb_content, .article-content,
+    .articleContent, article'
+  verification_status: passed
+  verified_at: '2026-09-11T00:35:32.040661+08:00'
+  verification_notes: 列表标题及链接可读取；详情按需进入
+- id: whu-5
+  university: 武汉大学
+  college: 城市设计学院
+  page_name: 硕士招生动态
+  list_url: https://wdyz.whu.edu.cn/sszs/zsdt.htm
+  domain: wdyz.whu.edu.cn
+  university_domain: whu.edu.cn
+  page_type: notice_list
+  source_level: university
+  title_selector: self
+  date_selector: .news_meta, .date, .time, span
+  link_selector: a[href]
+  article_url_pattern: /info/\d+/\d+\.htm|/i\d+\.html|/page\.(?:htm|psp)|/t\d+_\d+\.(?:html|htm)|/_upload/.*\.pdf
+  crawler_type: generic
+  enabled: true
+  content_selector: '.wp_articlecontent, .v_news_content, #vsb_content, .article-content,
+    .articleContent, article'
+  verification_status: passed
+  verified_at: '2026-09-11T00:35:32.040661+08:00'
+  verification_notes: 列表标题及链接可读取；详情按需进入
+- id: whu-6
+  university: 武汉大学
+  college: 城市设计学院
+  page_name: 学院公示
+  list_url: https://sud.whu.edu.cn/lmdh/tzgg/gs.htm
+  domain: sud.whu.edu.cn
+  university_domain: whu.edu.cn
+  page_type: notice_list
+  source_level: college
+  title_selector: self
+  date_selector: .news_meta, .date, .time, span
+  link_selector: a[href]
+  article_url_pattern: /info/\d+/\d+\.htm|/i\d+\.html|/page\.(?:htm|psp)|/t\d+_\d+\.(?:html|htm)|/_upload/.*\.pdf
+  crawler_type: generic
+  enabled: true
+  content_selector: '.wp_articlecontent, .v_news_content, #vsb_content, .article-content,
+    .articleContent, article'
+  verification_status: passed_with_warnings
+  verified_at: '2026-09-11T00:35:32.040661+08:00'
+  verification_notes: 44条缺少可确认的发布时间

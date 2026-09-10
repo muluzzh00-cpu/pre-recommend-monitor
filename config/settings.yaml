@@ -1,0 +1,21 @@
+monitoring:
+  start_date: '2026-09-10'
+  end_date: '2026-09-25 23:59:59'
+  timezone: Asia/Shanghai
+  interval_minutes: 60
+  target_year: 2027
+  initial_lookback_days: 120
+  daily_report_hour: 22
+crawler:
+  timeout_seconds: 18
+  retries: 2
+  interval_seconds: 1.2
+  max_list_pages: 3
+  user_agent: 'AdmissionNoticeMonitor/1.0 (public university admission notices; hourly)'
+  max_response_bytes: 5000000
+keywords:
+  strong: [推免, 预推免, 推荐免试, 免试攻读, 直博, 直接攻读博士, 直接攻博]
+  action: [报名, 申请, 实施细则, 复试, 面试, 材料提交, 接收优秀应届本科毕业生]
+  subject: [建筑, 城乡规划, 城市规划, 城市设计, 风景园林, 设计学]
+  admission: [研究生招生, 招生通知, 招生简章, 博士招生, 申请考核, 申请审核, 招生目录, 招生工作, 硕士研究生]
+  exclude: [博士后招聘, 本科招生, 转专业, 职称评审, 学位申请, 学位论文, 导师申请, 招生资格认定]

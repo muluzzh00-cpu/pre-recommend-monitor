@@ -1,0 +1,12 @@
+.env
+.venv/
+venv/
+__pycache__/
+.pytest_cache/
+state/
+logs/
+*.pyc
+test-state/
+test-reports*/
+cloud-test-state/
+test-results.xml
