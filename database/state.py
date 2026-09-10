@@ -37,6 +37,7 @@ class StateStore:
         if r.returncode:raise RuntimeError('State persistence Git operation failed: '+args[0])
         return r.stdout
     def upsert(self,item,now):
+        item.setdefault('publish_time',None)
         notices=self.data['notices']; key=notice_key(item['url']); old=notices.get(key)
         item['first_seen_time']=old['first_seen_time'] if old else now.isoformat()
         item['last_seen_time']=now.isoformat()

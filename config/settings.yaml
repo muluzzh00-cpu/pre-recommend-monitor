@@ -3,6 +3,9 @@ monitoring:
   end_date: '2026-09-25 23:59:59'
   timezone: Asia/Shanghai
   interval_minutes: 60
+  lookback_minutes: 75
+  initial_scan_mode: baseline
+  baseline_notify_since: '2026-09-10'
   target_year: 2027
   initial_lookback_days: 120
   daily_report_hour: 22
@@ -11,6 +14,7 @@ crawler:
   retries: 2
   interval_seconds: 1.2
   max_list_pages: 3
+  max_notices_per_source: 40
   user_agent: 'AdmissionNoticeMonitor/1.0 (public university admission notices; hourly)'
   max_response_bytes: 5000000
 keywords:

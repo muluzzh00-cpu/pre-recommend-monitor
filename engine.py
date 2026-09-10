@@ -8,6 +8,30 @@ from parser.relevance import classify
 from parser.deadline import extract, urgency, effective_deadline
 from database.state import digest, notice_key
 from notifier.render import render_notices, render_health
+from parser.publication import publication_window, baseline_relevant
+
+def title_identity(university,title):
+    return university,''.join(title.split())
+
+def initialize_policy(store,sites,now):
+    if 'monitoring_policy' not in store.data:
+        # Existing production records become the baseline without resetting delivery/reminder flags.
+        existing=bool(store.data['notices'])
+        store.data['monitoring_policy']={'version':2,'activated_at':now.isoformat(),
+            'baseline_sources':[s['id'] for s in sites] if existing else []}
+        for item in store.data['notices'].values():
+            item.setdefault('publish_time',None)
+            item.setdefault('new_notification_eligible',False)
+    return store.data['monitoring_policy']
+
+def record_daily_health(store,health,now):
+    day=now.date().isoformat()
+    daily=store.data.setdefault('daily_stats',{}).setdefault(day,{'runs':0,'failures':{}})
+    daily['runs']+=1;daily['last_run_at']=now.isoformat()
+    for key,stats in health.items():
+        if not stats['ok']:
+            failure=daily['failures'].setdefault(key,{'count':0,'first_failed_at':now.isoformat()})
+            failure.update(count=failure['count']+1,last_failed_at=now.isoformat(),error=stats.get('error','未知故障'))
 
 def delivery(store,sender,key,subject,html,on_success):
     existing=store.data['deliveries'].get(key)
@@ -25,33 +49,72 @@ def delivery(store,sender,key,subject,html,on_success):
     store.data['deliveries'][key]['status']='sent'; on_success(); store.save(); return True
 
 def run(settings,sites,clock,client,store,sender,report_dir):
-    clock.guard(); now=clock.now(); health={}; new=[]; detail_cache={}; discovered=0
+    clock.guard(); now=clock.now(); health={}; detail_cache={}; discovered=0
+    if settings['monitoring']['initial_scan_mode']!='baseline':raise ValueError('initial_scan_mode must be baseline')
+    policy=initialize_policy(store,sites,now)
+    titles={title_identity(x['university'],x['title']):k for k,x in store.data['notices'].items()}
     for site in sites:
         if not site['enabled']:continue
         clock.guard()
         crawler=CUSTOM.get(site['crawler_type'],GenericCrawler)(site,client)
-        stats={'ok':False,'fetched':0,'matched':0,'warnings':[],'checked_at':now.isoformat(),'latest':None}
+        baseline=site['id'] not in policy['baseline_sources']
+        stats={'ok':False,'fetched':0,'matched':0,'known_skipped':0,'outside_window':0,'details_requested':0,
+               'baseline':baseline,'warnings':[],'checked_at':now.isoformat(),'latest':None}
         try:
-            rows=crawler.crawl(); stats['fetched']=len(rows)
+            rows=crawler.crawl()[:site.get('max_notices',settings['crawler']['max_notices_per_source'])]; stats['fetched']=len(rows)
             for row in rows:
                 clock.guard(); row['url']=canonical(row['url'])
                 old=store.data['notices'].get(notice_key(row['url']))
-                candidate=classify(row['title'],'',site,settings,row.get('publish_date'),now)
-                detail={'text':'','notes':[],'publish_date':None}
-                if candidate['matched']:
+                identity=title_identity(site['university'],row['title'])
+                known=old if old and title_identity(old['university'],old['title'])==identity else store.data['notices'].get(titles.get(identity))
+                if known:
+                    known['last_seen_time']=now.isoformat();known.setdefault('publish_time',None)
+                    if not known.get('publish_time') and row.get('publish_time'):
+                        known['publish_time']=row['publish_time'];known['publish_date']=row['publish_date']
+                    elif not known.get('publish_date') and row.get('publish_date'):known['publish_date']=row['publish_date']
+                    if known['url']!=row['url'] and row['url'] not in known.setdefault('aliases',[]):known['aliases'].append(row['url'])
+                    stats['known_skipped']+=1
+                    if known.get('matched'):
+                        stats['matched']+=1
+                        if not stats['latest'] or (known.get('publish_date') or '')>(stats['latest'].get('publish_date') or ''):
+                            stats['latest']={k:known.get(k) for k in ('title','url','publish_date','publish_time')}
+                    continue
+                row.setdefault('publish_time',None);row.setdefault('publish_date',None)
+                allowed,reason=publication_window(row,now,settings,baseline)
+                empty_info={'matched':False,'relevance_score':0,'priority':1,'category':'未分析','is_direct_phd':False}
+                candidate=classify(row['title'],'',site,settings,row['publish_date'],now) if allowed or reason=='unknown_publication' else empty_info
+                detail={'text':'','notes':[],'publish_date':None,'publish_time':None}
+                inspect=candidate['matched'] and (allowed or reason=='unknown_publication')
+                if baseline:inspect=inspect and baseline_relevant(row['title'],'',candidate,settings)
+                if inspect:
                     try:
-                        if row['url'] not in detail_cache:detail_cache[row['url']]=crawler.detail(row)
+                        if row['url'] not in detail_cache:
+                            stats['details_requested']+=1
+                            detail_cache[row['url']]=crawler.detail(row)
                         detail={**detail_cache[row['url']],'notes':list(detail_cache[row['url']]['notes'])}
                     except PeriodEnded:raise
                     except Exception as exc:
                         detail['notes']=['详情页读取失败：'+type(exc).__name__]
                         stats['warnings'].append(row['url']+' 详情页读取失败 '+type(exc).__name__)
-                row['publish_date']=detail.get('publish_date') or row.get('publish_date') or (old.get('publish_date') if old else None)
-                if not row['publish_date']:detail['notes'].append('发布时间缺失；保留疑似通知，避免漏报')
-                info=classify(row['title'],detail['text'],site,settings,row['publish_date'],now)
-                item={**row,**info,**{k:site[k] for k in ('university','college','source_level')},'notes':detail['notes'],'content_hash':digest(detail['text']) if detail['text'] else None}
+                # Prefer precise publication metadata; a date-only detail must not erase list precision.
+                if detail.get('publish_time'):
+                    row['publish_time']=detail['publish_time'];row['publish_date']=detail['publish_date']
+                elif detail.get('publish_date') and not row['publish_time']:row['publish_date']=detail['publish_date']
+                allowed,reason=publication_window(row,now,settings,baseline)
+                if not allowed:stats['outside_window']+=1
+                if not row['publish_date']:detail['notes'].append('发布时间无法确认，列入日报待核实；不发送普通新通知')
+                info=classify(row['title'],detail['text'],site,settings,row['publish_date'],now) if inspect else candidate
+                eligible=allowed and info['matched'] and (not baseline or baseline_relevant(row['title'],detail['text'],info,settings))
+                item={**row,**info,**{k:site[k] for k in ('university','college','source_level')},'notes':detail['notes'],'content_hash':digest(detail['text']) if detail['text'] else None,
+                      'new_notification_eligible':eligible,'potential_new_notice':eligible and not row['publish_time'] and not baseline,
+                      'publication_window_reason':reason,'baseline_suppressed':baseline and not eligible,
+                      'needs_manual_review':info['matched'] and reason=='unknown_publication',
+                      'analysis_status':'analyzed' if inspect else 'baseline' if baseline else 'outside_window' if not allowed else 'irrelevant'}
                 if old and old.get('source_level')=='college' and item['source_level']=='university':
                     for k in ('source_level','college','priority','relevance_score'):item[k]=old[k]
+                if old and not inspect and old.get('matched'):
+                    # A renamed historical row must not cancel an already-saved deadline reminder.
+                    for k in ('matched','priority','relevance_score','category','is_direct_phd'):item[k]=old[k]
                 dates=extract(detail['text'],row['publish_date'],settings['monitoring']['timezone'])
                 if not detail['text'] and old:
                     for k in ('registration_start','registration_deadline','material_deadline','interview_date','deadline_evidence'):dates[k]=old.get(k)
@@ -61,9 +124,10 @@ def run(settings,sites,clock,client,store,sender,report_dir):
                     stats['matched']+=1
                     if not stats['latest'] or (item['publish_date'] or '')>(stats['latest'].get('publish_date') or ''):stats['latest']={k:item[k] for k in ('title','url','publish_date')}
                 key,changed=store.upsert(item,now)
-                if changed and item['matched']:discovered+=1
-                if item['matched']:new.append(key)
+                titles[identity]=key
+                if changed and eligible:discovered+=1
             stats['ok']=True
+            if baseline:policy['baseline_sources'].append(site['id'])
             missing=sum(not row.get('publish_date') for row in rows)
             if missing:stats['warnings'].append(f'{missing}条缺少可确认的发布时间')
         except PeriodEnded:store.save(); raise
@@ -73,11 +137,11 @@ def run(settings,sites,clock,client,store,sender,report_dir):
             logging.warning('%s: %s',site['id'],stats['error'])
         health[site['id']]=stats
         logging.info('%s fetched=%s matched=%s ok=%s',site['id'],stats['fetched'],stats['matched'],stats['ok'])
-    store.data['health']=health; store.save(); clock.guard()
+    store.data['health']=health;record_daily_health(store,health,now); store.save(); clock.guard()
     notices=store.data['notices']; pending=[]
     # Include previous unsent records even if a list temporarily loses them.
     for key,x in notices.items():
-        if not x.get('matched'):continue
+        if not x.get('matched') or not x.get('new_notification_eligible'):continue
         event=f'new:{key}:{x["revision"]}'
         if event not in store.data['deliveries']:pending.append((key,event))
     mail_ok=True
@@ -125,7 +189,10 @@ def run(settings,sites,clock,client,store,sender,report_dir):
         def mark_daily():store.data['daily_reports'][day]=True
         mail_ok=delivery(store,sender,'daily-'+day,'【2027推免监控日报】'+day,render_health(health,sites,store.data,now,settings),mark_daily) and mail_ok
     unresolved=sum(v['status'] in ('sending','uncertain') for v in store.data['deliveries'].values())
-    report={'checked_at':now.isoformat(),'new_or_updated':discovered,'pending_new_events':len(pending),'http_requests':client.requests_count,'email_ok':mail_ok,'unresolved_deliveries':unresolved,'health':health}
+    report={'checked_at':now.isoformat(),'lookback_minutes':settings['monitoring']['lookback_minutes'],
+            'details_requested':sum(s['details_requested'] for s in health.values()),
+            'known_skipped':sum(s['known_skipped'] for s in health.values()),
+            'new_or_updated':discovered,'pending_new_events':len(pending),'http_requests':client.requests_count,'email_ok':mail_ok,'unresolved_deliveries':unresolved,'health':health}
     out=Path(report_dir);out.mkdir(parents=True,exist_ok=True)
     (out/'latest.json').write_text(json.dumps(report,ensure_ascii=False,indent=2),encoding='utf-8')
     (out/'health.html').write_text(render_health(health,sites,store.data,now,settings),encoding='utf-8')

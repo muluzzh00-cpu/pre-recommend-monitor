@@ -3,6 +3,7 @@ from bs4 import NavigableString
 from urllib.parse import urljoin, urlsplit, urlunsplit, parse_qsl, urlencode
 from bs4 import BeautifulSoup
 from .base import BaseCrawler, CrawlError
+from parser.publication import publication
 
 DATE = re.compile(r'(20\d{2})\s*[年./-]\s*(\d{1,2})\s*[月./-]\s*(\d{1,2})日?')
 def find_date(text):
@@ -40,32 +41,40 @@ class GenericCrawler(BaseCrawler):
             seen.add(full)
             row=a.find_parent(self.site.get('row_tag','li')) or a.parent
             dn=row.select_one(self.site['date_selector']) if self.site['date_selector'] else None
-            date=find_date(dn.get_text(' ',strip=True)) if dn else None
-            if not date:date=find_date(row.get_text(' ',strip=True))
-            rows.append({'title':title,'url':full,'publish_date':date})
+            dn=row.select_one('time[datetime]') or dn
+            pub=publication((dn.get('datetime') or dn.get('content') or dn.get_text(' ',strip=True)) if dn else '')
+            if not pub['publish_date']:pub=publication(row.get_text(' ',strip=True))
+            rows.append({'title':title,'url':full,**pub})
+            if len(rows)>=self.site.get('max_notices',self.client.cfg.get('max_notices_per_source',40)):break
         if not rows:raise CrawlError('No article links: selector invalid, structure changed, or page blocked')
         return rows,soup
     def crawl(self):
         url=self.site['list_url']; rows=[]; visited=set()
+        limit=self.site.get('max_notices',self.client.cfg.get('max_notices_per_source',40))
         for _ in range(self.client.cfg['max_list_pages']):
             if url in visited:break
             visited.add(url)
             parsed,soup=self.parse(self.client.get(url).text,url); rows.extend(parsed)
+            rows=list({canonical(r['url']):r for r in rows}.values())
+            if len(rows)>=limit:break
             next_link=next((a for a in soup.select('a[href]') if re.search(r'下一页|下页|Next',a.get_text(' ',strip=True),re.I)),None)
             if not next_link:break
             next_url=urljoin(url,next_link['href'])
             if urlsplit(next_url).netloc != urlsplit(url).netloc:break
             url=next_url
-        return list({canonical(r['url']):r for r in rows}.values())
+        return list({canonical(r['url']):r for r in rows}.values())[:limit]
     def detail(self, item):
         r=self.client.get(item['url'])
         if 'pdf' in r.headers.get('Content-Type','').lower() or item['url'].lower().endswith('.pdf'):
-            return {'text':'','publish_date':None,'notes':['PDF原文，需人工查看截止日期'],'attachments':[item['url']]}
+            return {'text':'','publish_date':None,'publish_time':None,'notes':['PDF原文，需人工查看截止日期'],'attachments':[item['url']]}
         soup=BeautifulSoup(r.text,'html.parser')
-        meta=soup.select_one('meta[name="PubDate"],meta[name="publishdate"],meta[name="DC.date.issued"]')
-        pub=find_date(meta.get('content','')) if meta else None
-        header_date=soup.select_one('.entry-date, .arti_update, .article-date')
-        if not pub and header_date:pub=find_date(header_date.get_text(' ',strip=True))
+        meta=soup.select_one('meta[name="PubDate"],meta[name="publishdate"],meta[name="DC.date.issued"],meta[property="article:published_time"]')
+        published=publication(meta.get('content','')) if meta else publication('')
+        pub=published['publish_date']
+        header_date=soup.select_one('.entry-date, .arti_update, .article-date, time[datetime]')
+        if header_date:
+            header_pub=publication(header_date.get('datetime') or header_date.get_text(' ',strip=True))
+            if header_pub['publish_time'] or not pub:published=header_pub;pub=published['publish_date']
         content=soup.select_one(self.site.get('content_selector','.wp_articlecontent, .v_news_content, #vsb_content, article'))
         notes=[]
         if content is None:
@@ -78,9 +87,11 @@ class GenericCrawler(BaseCrawler):
         for node in content.select('p,li,tr,br,h1,h2,h3'):node.insert_after(NavigableString('\n'))
         text=content.get_text(' ',strip=False)
         text=re.sub(r'[^\S\n]+',' ',text).strip()
-        if not pub:
-            match=re.search(r'(?:发布时间|发布日期|发布于|时间|日期)\s*[:：]?\s*(20\d{2}[年./-]\d{1,2}[月./-]\d{1,2}日?)',soup.get_text(' ',strip=True))
-            if match:pub=find_date(match.group(1))
+        if not published['publish_time']:
+            match=re.search(r'(?:发布时间|发布日期|发布于)\s*[:：]?\s*(20\d{2}[年./-]\d{1,2}[月./-]\d{1,2}日?(?:[T\s]+\d{1,2}[:：]\d{2}(?:[:：]\d{2})?)?)',soup.get_text(' ',strip=True))
+            if match:
+                labeled=publication(match.group(1))
+                if labeled['publish_time'] or not pub:published=labeled;pub=published['publish_date']
         if not pub:
             m=re.search(r'/(20\d{2})/(\d{2})(\d{2})/',item['url'])
             if m:pub=find_date('-'.join(m.groups()))
@@ -94,8 +105,8 @@ class GenericCrawler(BaseCrawler):
                 for sibling in heading.next_siblings:
                     if sibling==content or len(''.join(next_text))>220:break
                     next_text.append(sibling.get_text(' ',strip=True) if hasattr(sibling,'get_text') else str(sibling))
-                pub=find_date(' '.join(next_text)[:220])
+                published=publication(' '.join(next_text)[:220]);pub=published['publish_date']
         attachments=[urljoin(item['url'],a['href']) for a in content.select('a[href]') if re.search(r'\.pdf|\.docx?|DownloadAttach',a['href'],re.I)]
         if attachments:notes.append('原文含附件；附件/扫描件中的日期未自动确认，请打开原文核查')
         if len(text)<60:notes.append('正文过短或图片通知，需人工查看原文')
-        return {'text':text,'publish_date':pub,'notes':notes,'attachments':attachments}
+        return {'text':text,'publish_date':pub,'publish_time':published['publish_time'],'notes':notes,'attachments':attachments}
