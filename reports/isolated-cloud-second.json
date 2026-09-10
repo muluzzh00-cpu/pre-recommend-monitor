@@ -1,0 +1,393 @@
+{
+  "checked_at": "2026-09-11T03:37:14.171146+08:00",
+  "new_or_updated": 0,
+  "pending_new_events": 0,
+  "http_requests": 160,
+  "email_ok": true,
+  "unresolved_deliveries": 0,
+  "health": {
+    "zju-1": {
+      "ok": true,
+      "fetched": 42,
+      "matched": 7,
+      "warnings": [],
+      "checked_at": "2026-09-11T03:37:14.171146+08:00",
+      "latest": {
+        "title": "2027年建筑工程学院招收推免生综合考核实施细则",
+        "url": "http://www.ccea.zju.edu.cn/2026/0909/c18473a3200248/page.htm",
+        "publish_date": "2026-09-09"
+      }
+    },
+    "zju-2": {
+      "ok": true,
+      "fetched": 30,
+      "matched": 0,
+      "warnings": [],
+      "checked_at": "2026-09-11T03:37:14.171146+08:00",
+      "latest": null
+    },
+    "zju-3": {
+      "ok": true,
+      "fetched": 41,
+      "matched": 2,
+      "warnings": [],
+      "checked_at": "2026-09-11T03:37:14.171146+08:00",
+      "latest": {
+        "title": "浙江大学关于接收2027年“国优计划”推荐免试硕士研究生预报名的通知",
+        "url": "http://www.grs.zju.edu.cn/yjszs/2026/0901/c28479a3198050/page.htm",
+        "publish_date": "2026-09-01"
+      }
+    },
+    "zju-4": {
+      "ok": true,
+      "fetched": 36,
+      "matched": 1,
+      "warnings": [],
+      "checked_at": "2026-09-11T03:37:14.171146+08:00",
+      "latest": {
+        "title": "2027年多学科交叉博士研究生培养专项计划招生简章",
+        "url": "http://www.grs.zju.edu.cn/yjszs/2026/0811/c28499a3194555/page.htm",
+        "publish_date": "2026-08-11"
+      }
+    },
+    "nju-1": {
+      "ok": true,
+      "fetched": 43,
+      "matched": 3,
+      "warnings": [],
+      "checked_at": "2026-09-11T03:37:14.171146+08:00",
+      "latest": {
+        "title": "2027年接收推荐免试研究生工作实施细则",
+        "url": "http://arch.nju.edu.cn/rcpy/yjs/pyfa/20260909/i416044.html",
+        "publish_date": "2026-09-09"
+      }
+    },
+    "nju-2": {
+      "ok": true,
+      "fetched": 13,
+      "matched": 2,
+      "warnings": [],
+      "checked_at": "2026-09-11T03:37:14.171146+08:00",
+      "latest": {
+        "title": "2027年接收推荐免试研究生预报名通知",
+        "url": "http://arch.nju.edu.cn/sy/tzgg/20260803/i406985.html",
+        "publish_date": "2026-08-03"
+      }
+    },
+    "nju-3": {
+      "ok": true,
+      "fetched": 21,
+      "matched": 4,
+      "warnings": [],
+      "checked_at": "2026-09-11T03:37:14.171146+08:00",
+      "latest": {
+        "title": "南京大学2027年接收推荐免试研究生工作办法",
+        "url": "https://yzb.nju.edu.cn/dd/df/c47868a843231/page.htm",
+        "publish_date": "2026-09-08"
+      }
+    },
+    "nju-4": {
+      "ok": true,
+      "fetched": 39,
+      "matched": 6,
+      "warnings": [],
+      "checked_at": "2026-09-11T03:37:14.171146+08:00",
+      "latest": {
+        "title": "南京大学2027年接收推荐免试研究生工作办法",
+        "url": "https://yzb.nju.edu.cn/dd/dc/c47863a843228/page.htm",
+        "publish_date": "2026-09-08"
+      }
+    },
+    "nju-5": {
+      "ok": true,
+      "fetched": 41,
+      "matched": 6,
+      "warnings": [],
+      "checked_at": "2026-09-11T03:37:14.171146+08:00",
+      "latest": {
+        "title": "南京大学2027年接收推荐免试研究生工作办法",
+        "url": "https://yzb.nju.edu.cn/dd/de/c47865a843230/page.htm",
+        "publish_date": "2026-09-08"
+      }
+    },
+    "suda-1": {
+      "ok": true,
+      "fetched": 30,
+      "matched": 3,
+      "warnings": [
+        "27条缺少可确认的发布时间"
+      ],
+      "checked_at": "2026-09-11T03:37:14.171146+08:00",
+      "latest": {
+        "title": "苏州大学金螳螂建筑学院关于接收2027年推荐免试研究生预报名的通知",
+        "url": "https://arch.suda.edu.cn/da/82/c5572a711298/page.htm",
+        "publish_date": null
+      }
+    },
+    "suda-2": {
+      "ok": true,
+      "fetched": 36,
+      "matched": 1,
+      "warnings": [
+        "35条缺少可确认的发布时间"
+      ],
+      "checked_at": "2026-09-11T03:37:14.171146+08:00",
+      "latest": {
+        "title": "关于接收2027级推荐免试研究生（含直博生）预报名的通知",
+        "url": "https://yjs.suda.edu.cn/da/52/c8365a711250/page.htm",
+        "publish_date": "2026-08-10"
+      }
+    },
+    "suda-3": {
+      "ok": true,
+      "fetched": 22,
+      "matched": 1,
+      "warnings": [
+        "21条缺少可确认的发布时间"
+      ],
+      "checked_at": "2026-09-11T03:37:14.171146+08:00",
+      "latest": {
+        "title": "关于接收2027级推荐免试研究生（含直博生）预报名的通知",
+        "url": "https://yjs.suda.edu.cn/da/52/c8386a711250/page.htm",
+        "publish_date": "2026-08-10"
+      }
+    },
+    "suda-4": {
+      "ok": true,
+      "fetched": 16,
+      "matched": 0,
+      "warnings": [
+        "16条缺少可确认的发布时间"
+      ],
+      "checked_at": "2026-09-11T03:37:14.171146+08:00",
+      "latest": null
+    },
+    "hnu-1": {
+      "ok": false,
+      "fetched": 0,
+      "matched": 0,
+      "warnings": [],
+      "checked_at": "2026-09-11T03:37:14.171146+08:00",
+      "latest": null,
+      "error": "ConnectionError: HTTPSConnectionPool(host='arch.hnu.edu.cn', port=443): Max retries exceeded with url: /robots.txt (Caused by NewConnectionError(\"HTTPSConnection(host='arch.hnu.edu.cn', port=443): Failed to establish a new connection: [Errno 101] Network is unreachable\"))"
+    },
+    "hnu-2": {
+      "ok": false,
+      "fetched": 0,
+      "matched": 0,
+      "warnings": [],
+      "checked_at": "2026-09-11T03:37:14.171146+08:00",
+      "latest": null,
+      "error": "ConnectionError: HTTPSConnectionPool(host='arch.hnu.edu.cn', port=443): Max retries exceeded with url: /robots.txt (Caused by NewConnectionError(\"HTTPSConnection(host='arch.hnu.edu.cn', port=443): Failed to establish a new connection: [Errno 101] Network is unreachable\"))"
+    },
+    "hnu-3": {
+      "ok": false,
+      "fetched": 0,
+      "matched": 0,
+      "warnings": [],
+      "checked_at": "2026-09-11T03:37:14.171146+08:00",
+      "latest": null,
+      "error": "ConnectionError: HTTPSConnectionPool(host='gra.hnu.edu.cn', port=443): Max retries exceeded with url: /robots.txt (Caused by NewConnectionError(\"HTTPSConnection(host='gra.hnu.edu.cn', port=443): Failed to establish a new connection: [Errno 101] Network is unreachable\"))"
+    },
+    "hnu-4": {
+      "ok": false,
+      "fetched": 0,
+      "matched": 0,
+      "warnings": [],
+      "checked_at": "2026-09-11T03:37:14.171146+08:00",
+      "latest": null,
+      "error": "ConnectionError: HTTPSConnectionPool(host='gra.hnu.edu.cn', port=443): Max retries exceeded with url: /robots.txt (Caused by NewConnectionError(\"HTTPSConnection(host='gra.hnu.edu.cn', port=443): Failed to establish a new connection: [Errno 101] Network is unreachable\"))"
+    },
+    "hnu-5": {
+      "ok": false,
+      "fetched": 0,
+      "matched": 0,
+      "warnings": [],
+      "checked_at": "2026-09-11T03:37:14.171146+08:00",
+      "latest": null,
+      "error": "ConnectionError: HTTPSConnectionPool(host='gra.hnu.edu.cn', port=443): Max retries exceeded with url: /robots.txt (Caused by NewConnectionError(\"HTTPSConnection(host='gra.hnu.edu.cn', port=443): Failed to establish a new connection: [Errno 101] Network is unreachable\"))"
+    },
+    "scut-1": {
+      "ok": true,
+      "fetched": 26,
+      "matched": 0,
+      "warnings": [],
+      "checked_at": "2026-09-11T03:37:14.171146+08:00",
+      "latest": null
+    },
+    "scut-2": {
+      "ok": true,
+      "fetched": 35,
+      "matched": 3,
+      "warnings": [],
+      "checked_at": "2026-09-11T03:37:14.171146+08:00",
+      "latest": {
+        "title": "关于公布建筑学院2026年第二批博士研究生复试成绩查询及师生双选的通知",
+        "url": "https://www2.scut.edu.cn/architecture/2026/0603/c35411a628664/page.htm",
+        "publish_date": "2026-06-04"
+      }
+    },
+    "scut-3": {
+      "ok": true,
+      "fetched": 33,
+      "matched": 0,
+      "warnings": [],
+      "checked_at": "2026-09-11T03:37:14.171146+08:00",
+      "latest": null
+    },
+    "scut-4": {
+      "ok": true,
+      "fetched": 36,
+      "matched": 2,
+      "warnings": [],
+      "checked_at": "2026-09-11T03:37:14.171146+08:00",
+      "latest": {
+        "title": "华南理工大学接收2027年推荐免试研究生预报名通知",
+        "url": "https://yz.scut.edu.cn/2026/0828/c30111a633884/page.htm",
+        "publish_date": "2026-08-28"
+      }
+    },
+    "scut-5": {
+      "ok": true,
+      "fetched": 35,
+      "matched": 1,
+      "warnings": [],
+      "checked_at": "2026-09-11T03:37:14.171146+08:00",
+      "latest": {
+        "title": "华南理工大学接收2027年推荐免试研究生预报名通知",
+        "url": "https://yz.scut.edu.cn/2026/0828/c30112a633884/page.htm",
+        "publish_date": "2026-08-28"
+      }
+    },
+    "tju-1": {
+      "ok": true,
+      "fetched": 60,
+      "matched": 1,
+      "warnings": [
+        "59条缺少可确认的发布时间"
+      ],
+      "checked_at": "2026-09-11T03:37:14.171146+08:00",
+      "latest": {
+        "title": "天津大学建筑工程学院接收2027级校内外推免生告知信",
+        "url": "https://jgxy.tju.edu.cn/info/1047/37521.htm",
+        "publish_date": "2026-07-30"
+      }
+    },
+    "tju-2": {
+      "ok": true,
+      "fetched": 60,
+      "matched": 2,
+      "warnings": [
+        "58条缺少可确认的发布时间"
+      ],
+      "checked_at": "2026-09-11T03:37:14.171146+08:00",
+      "latest": {
+        "title": "2026年（2027届）建筑工程学院推荐优秀应届本科毕业生免试攻读研究生名单公示",
+        "url": "https://jgxy.tju.edu.cn/info/1038/37991.htm",
+        "publish_date": "2026-09-10"
+      }
+    },
+    "tju-3": {
+      "ok": true,
+      "fetched": 21,
+      "matched": 3,
+      "warnings": [
+        "18条缺少可确认的发布时间"
+      ],
+      "checked_at": "2026-09-11T03:37:14.171146+08:00",
+      "latest": {
+        "title": "关于调整我校2027年硕士研究生招生单独考试相关专业初试科目的通知",
+        "url": "https://yzb.tju.edu.cn/xwzx/tkss_xw/202607/t20260714_324677.htm",
+        "publish_date": "2026-07-14"
+      }
+    },
+    "tju-4": {
+      "ok": true,
+      "fetched": 21,
+      "matched": 1,
+      "warnings": [
+        "20条缺少可确认的发布时间"
+      ],
+      "checked_at": "2026-09-11T03:37:14.171146+08:00",
+      "latest": {
+        "title": "【2027推免生接收篇】天津大学2027年直博生报名系统开通",
+        "url": "https://yzb.tju.edu.cn/xwzx/tkbs_xw/202609/t20260901_324691.htm",
+        "publish_date": "2026-09-01"
+      }
+    },
+    "tju-5": {
+      "ok": true,
+      "fetched": 21,
+      "matched": 2,
+      "warnings": [
+        "18条缺少可确认的发布时间"
+      ],
+      "checked_at": "2026-09-11T03:37:14.171146+08:00",
+      "latest": {
+        "title": "天津大学2027年推荐优秀应届本科毕业生免试攻读硕士学位和直接攻读博士学位研究生招生录取工作办法",
+        "url": "https://yzb.tju.edu.cn/xwzx/zxxx/202609/t20260908_324696.htm",
+        "publish_date": "2026-09-08"
+      }
+    },
+    "whu-1": {
+      "ok": true,
+      "fetched": 45,
+      "matched": 1,
+      "warnings": [
+        "42条缺少可确认的发布时间"
+      ],
+      "checked_at": "2026-09-11T03:37:14.171146+08:00",
+      "latest": {
+        "title": "09月 02 城市设计学院2027年接收攻读硕士学位推免生预报名的通知",
+        "url": "https://sud.whu.edu.cn/info/1521/51191.htm",
+        "publish_date": "2026-09-02"
+      }
+    },
+    "whu-2": {
+      "ok": true,
+      "fetched": 1,
+      "matched": 0,
+      "warnings": [],
+      "checked_at": "2026-09-11T03:37:14.171146+08:00",
+      "latest": null
+    },
+    "whu-3": {
+      "ok": true,
+      "fetched": 3,
+      "matched": 0,
+      "warnings": [],
+      "checked_at": "2026-09-11T03:37:14.171146+08:00",
+      "latest": null
+    },
+    "whu-4": {
+      "ok": true,
+      "fetched": 24,
+      "matched": 0,
+      "warnings": [],
+      "checked_at": "2026-09-11T03:37:14.171146+08:00",
+      "latest": null
+    },
+    "whu-5": {
+      "ok": true,
+      "fetched": 12,
+      "matched": 0,
+      "warnings": [],
+      "checked_at": "2026-09-11T03:37:14.171146+08:00",
+      "latest": null
+    },
+    "whu-6": {
+      "ok": true,
+      "fetched": 45,
+      "matched": 1,
+      "warnings": [
+        "44条缺少可确认的发布时间"
+      ],
+      "checked_at": "2026-09-11T03:37:14.171146+08:00",
+      "latest": {
+        "title": "07月 10 城市设计学院“研究生学术创新奖”评选实施细则",
+        "url": "https://sud.whu.edu.cn/info/1511/41091.htm",
+        "publish_date": "2026-07-10"
+      }
+    }
+  }
+}
