@@ -2,7 +2,7 @@
 
 面向指定的七个学院和对应学校研招官网。Python 抓取、规则判断、HTML 邮件、GitHub Actions 每小时执行，状态保存到同一仓库的 `monitor-state` 独立分支。
 
-**交付状态请先看 `reports/验收报告.md`。项目文件已创建并接受实际网站测试；只有上传到你自己的 GitHub 仓库、配置邮箱 Secrets、成功触发云端运行后，才算部署启用。本地测试预览不等于 Gmail 实际收到邮件。**
+**已部署：[GitHub 仓库](https://github.com/muluzzh00-cpu/pre-recommend-monitor)。7 校 34 页云端抓取、真实邮件送达、两轮正式运行和持久化去重已验证。详见 [云端验收报告](reports/云端验收报告.md)；定时历史及首次日报仍待后续观察。**
 
 ## 1. 系统监控什么
 
