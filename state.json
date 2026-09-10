@@ -28223,7 +28223,192 @@
       "signature": "b6110278afefe48d499829b4f8f20ef8217518d1394a734a43055d24dc487382"
     }
   },
-  "deliveries": {},
+  "deliveries": {
+    "new:e5db278a43907d0682c09d82aa07ff9df43adabdae67844a3c31559a0c60b0d2:1": {
+      "status": "sending",
+      "batch": "dbda15b2aaf1f8c4c9ac980320c53f2405e1e3a45d9e1bc836dc39da4dbf2dcd"
+    },
+    "new:2a944573cb0c03f82b1a1e017ba88f0ff3a1477ee9bbdbc24f14860fc05f226d:1": {
+      "status": "sending",
+      "batch": "dbda15b2aaf1f8c4c9ac980320c53f2405e1e3a45d9e1bc836dc39da4dbf2dcd"
+    },
+    "new:c81b66d6b1414682d3255eddfcd5f092426d8d32579703f6e6f9befbc15a4d60:1": {
+      "status": "sending",
+      "batch": "dbda15b2aaf1f8c4c9ac980320c53f2405e1e3a45d9e1bc836dc39da4dbf2dcd"
+    },
+    "new:70a5fb9b1d05bd8cc0efed171611ccaa724695a767f1761c6cd361ece1c6e10c:1": {
+      "status": "sending",
+      "batch": "dbda15b2aaf1f8c4c9ac980320c53f2405e1e3a45d9e1bc836dc39da4dbf2dcd"
+    },
+    "new:815df2f9ea8d42afdf6b4d6a8a0ba0931b7bea93eed91a6ca43fcda18e79424e:1": {
+      "status": "sending",
+      "batch": "dbda15b2aaf1f8c4c9ac980320c53f2405e1e3a45d9e1bc836dc39da4dbf2dcd"
+    },
+    "new:8669369ba9bd0451abf299bde5e2f038e481b897d6b1ef77d7f2cb9071c35132:1": {
+      "status": "sending",
+      "batch": "dbda15b2aaf1f8c4c9ac980320c53f2405e1e3a45d9e1bc836dc39da4dbf2dcd"
+    },
+    "new:8b413480df1a888e8da425828ba365333ec7defb4febc53341653a26fb2c4a1a:1": {
+      "status": "sending",
+      "batch": "dbda15b2aaf1f8c4c9ac980320c53f2405e1e3a45d9e1bc836dc39da4dbf2dcd"
+    },
+    "new:02b2d26f6f2dd845c65d99a3fd8e0c3772664c9019f43b6feb82b540a47316a9:1": {
+      "status": "sending",
+      "batch": "dbda15b2aaf1f8c4c9ac980320c53f2405e1e3a45d9e1bc836dc39da4dbf2dcd"
+    },
+    "new:8af7c1dd60d524ab766374a77e8182aad9a1c4b7e3bc104b225c52b7164269b8:1": {
+      "status": "sending",
+      "batch": "dbda15b2aaf1f8c4c9ac980320c53f2405e1e3a45d9e1bc836dc39da4dbf2dcd"
+    },
+    "new:0c9df0f17b2c5abbc1506d2c13e1c3f2f60924183e6cc90763f876f5d0e5ee7a:1": {
+      "status": "sending",
+      "batch": "dbda15b2aaf1f8c4c9ac980320c53f2405e1e3a45d9e1bc836dc39da4dbf2dcd"
+    },
+    "new:133b063c1cab82e07926045211a63a87c87a67e7974c6d5e4a8700b8af79e57e:1": {
+      "status": "sending",
+      "batch": "dbda15b2aaf1f8c4c9ac980320c53f2405e1e3a45d9e1bc836dc39da4dbf2dcd"
+    },
+    "new:aaf77ee8ce38378b47f8373419df750bafd06958ed3d10079694c38d1b1aaf94:1": {
+      "status": "sending",
+      "batch": "dbda15b2aaf1f8c4c9ac980320c53f2405e1e3a45d9e1bc836dc39da4dbf2dcd"
+    },
+    "new:a9bddca6b9f606db4cc5494b04b6e73856e1259489e341da42eeb8d39330e875:1": {
+      "status": "sending",
+      "batch": "dbda15b2aaf1f8c4c9ac980320c53f2405e1e3a45d9e1bc836dc39da4dbf2dcd"
+    },
+    "new:6b47f249ca22eb876d83d547fab3cbdd71cb6e26ab9fe9d9dd8d3d051e7ae9ed:1": {
+      "status": "sending",
+      "batch": "dbda15b2aaf1f8c4c9ac980320c53f2405e1e3a45d9e1bc836dc39da4dbf2dcd"
+    },
+    "new:4ff6cd82f7847caf1ad1cebd40ae0750a0cf885c58d38484da7b8b5ba75e0864:1": {
+      "status": "sending",
+      "batch": "dbda15b2aaf1f8c4c9ac980320c53f2405e1e3a45d9e1bc836dc39da4dbf2dcd"
+    },
+    "new:0d5a327eeb9e56fe5658a8094e815c4bc2e364129f891b3658f25909e89993b4:1": {
+      "status": "sending",
+      "batch": "dbda15b2aaf1f8c4c9ac980320c53f2405e1e3a45d9e1bc836dc39da4dbf2dcd"
+    },
+    "new:da6cf0c61fa2d46b3fd902531131dfec563b30e140574b93e84cfcee41cda9f6:1": {
+      "status": "sending",
+      "batch": "dbda15b2aaf1f8c4c9ac980320c53f2405e1e3a45d9e1bc836dc39da4dbf2dcd"
+    },
+    "new:fd73ce8b12814092e41dceecd05eaabd899c7f25e5ee96bf8b7de0f7f3ddd655:1": {
+      "status": "sending",
+      "batch": "dbda15b2aaf1f8c4c9ac980320c53f2405e1e3a45d9e1bc836dc39da4dbf2dcd"
+    },
+    "new:04dfd1e0e17925fa8fa21645144cb8729a860c0d2496cdc2f212d56bfb0ce681:1": {
+      "status": "sending",
+      "batch": "dbda15b2aaf1f8c4c9ac980320c53f2405e1e3a45d9e1bc836dc39da4dbf2dcd"
+    },
+    "new:a5151de89042699d2d8e79dafed069e2856c1aca1e1cd46021121ae7102c2917:1": {
+      "status": "sending",
+      "batch": "dbda15b2aaf1f8c4c9ac980320c53f2405e1e3a45d9e1bc836dc39da4dbf2dcd"
+    },
+    "new:05b3774b38778cd281351fb161652b06a47d2edbcd735d15579b61c505c330c5:1": {
+      "status": "sending",
+      "batch": "dbda15b2aaf1f8c4c9ac980320c53f2405e1e3a45d9e1bc836dc39da4dbf2dcd"
+    },
+    "new:58b14546f7d7dba992954f40d2c1a9d8727829bf326ed51fd6c7d82632a49cfb:1": {
+      "status": "sending",
+      "batch": "dbda15b2aaf1f8c4c9ac980320c53f2405e1e3a45d9e1bc836dc39da4dbf2dcd"
+    },
+    "new:4cbaa70b08149a300e0a8aa01d3d64a272dbfe3e1a426fbdbd34b43238f99e78:1": {
+      "status": "sending",
+      "batch": "dbda15b2aaf1f8c4c9ac980320c53f2405e1e3a45d9e1bc836dc39da4dbf2dcd"
+    },
+    "new:a1664394865f5e45cf843f6d79945780a7c513bb48111be6daab273120611879:1": {
+      "status": "sending",
+      "batch": "dbda15b2aaf1f8c4c9ac980320c53f2405e1e3a45d9e1bc836dc39da4dbf2dcd"
+    },
+    "new:f7afa3c78a99dec3cc3e82905856274772a80da66319d9051ee4323e91c9328b:1": {
+      "status": "sending",
+      "batch": "dbda15b2aaf1f8c4c9ac980320c53f2405e1e3a45d9e1bc836dc39da4dbf2dcd"
+    },
+    "new:aefed84d2f43fad488d87e31025175ef13843fe1bd2754ff819c17c8ac57f624:1": {
+      "status": "sending",
+      "batch": "dbda15b2aaf1f8c4c9ac980320c53f2405e1e3a45d9e1bc836dc39da4dbf2dcd"
+    },
+    "new:3ea82f517cc11b4d7eb8bc4c5202cd069b1590a1264440ed093f8878de552e1e:1": {
+      "status": "sending",
+      "batch": "dbda15b2aaf1f8c4c9ac980320c53f2405e1e3a45d9e1bc836dc39da4dbf2dcd"
+    },
+    "new:9966f012d8cad75cd66ee2de14c2ee0869698a0622e569ab5a1ecd48990a90be:1": {
+      "status": "sending",
+      "batch": "dbda15b2aaf1f8c4c9ac980320c53f2405e1e3a45d9e1bc836dc39da4dbf2dcd"
+    },
+    "new:c46d052d7caa3c9cbf2d36318403ad9cf5fb29900c69036270620643fec068bf:1": {
+      "status": "sending",
+      "batch": "dbda15b2aaf1f8c4c9ac980320c53f2405e1e3a45d9e1bc836dc39da4dbf2dcd"
+    },
+    "new:ba72b943aeb820d7505e916db8f4cefab6eb45874b8dfbe3e6a558b8f10f4a5b:1": {
+      "status": "sending",
+      "batch": "dbda15b2aaf1f8c4c9ac980320c53f2405e1e3a45d9e1bc836dc39da4dbf2dcd"
+    },
+    "new:f37abd55828ef822e770c78a7fa104bc4bad0010652afda7b867bc614d5d397a:1": {
+      "status": "sending",
+      "batch": "dbda15b2aaf1f8c4c9ac980320c53f2405e1e3a45d9e1bc836dc39da4dbf2dcd"
+    },
+    "new:3e5964e292701c9fe81921c4bb6fa8d38e0ea42eb58d0ceef05519a7687bb4a0:1": {
+      "status": "sending",
+      "batch": "dbda15b2aaf1f8c4c9ac980320c53f2405e1e3a45d9e1bc836dc39da4dbf2dcd"
+    },
+    "new:594df6f6b8b795bfd0cbb25688291315f973b1d52a22223f6bb1c5e376f0bf88:1": {
+      "status": "sending",
+      "batch": "dbda15b2aaf1f8c4c9ac980320c53f2405e1e3a45d9e1bc836dc39da4dbf2dcd"
+    },
+    "new:0fd79efa7cb59440ab0392e536c765c9252fb44957338a32d2b8fd6a9fb0a735:1": {
+      "status": "sending",
+      "batch": "dbda15b2aaf1f8c4c9ac980320c53f2405e1e3a45d9e1bc836dc39da4dbf2dcd"
+    },
+    "new:494714d7c1ac0701bb92838a6184615f3cd8c0e68446e1c126f7b1707575d629:1": {
+      "status": "sending",
+      "batch": "dbda15b2aaf1f8c4c9ac980320c53f2405e1e3a45d9e1bc836dc39da4dbf2dcd"
+    },
+    "new:de0482fa8fabf0e84ea2452d33376ea18d330cfa9462921c81a86d451e390089:1": {
+      "status": "sending",
+      "batch": "dbda15b2aaf1f8c4c9ac980320c53f2405e1e3a45d9e1bc836dc39da4dbf2dcd"
+    },
+    "new:90cdd1aafdf1b55439a59a41d8fb32f74041174a1bffa1ec31241cedcbd49d26:1": {
+      "status": "sending",
+      "batch": "dbda15b2aaf1f8c4c9ac980320c53f2405e1e3a45d9e1bc836dc39da4dbf2dcd"
+    },
+    "new:e7dcca6cb2b1aafa16e01f69d3ed151f18555ffbe205b4d3037a16a5fa11087b:1": {
+      "status": "sending",
+      "batch": "dbda15b2aaf1f8c4c9ac980320c53f2405e1e3a45d9e1bc836dc39da4dbf2dcd"
+    },
+    "new:fdc4aa25822d0761462e48c47157ba77ed57c8f47d5e1e01876e0d73e0cd4f81:1": {
+      "status": "sending",
+      "batch": "dbda15b2aaf1f8c4c9ac980320c53f2405e1e3a45d9e1bc836dc39da4dbf2dcd"
+    },
+    "new:6519fb1a78ebc8c3e177cd29b0136cf1fee9cd6911e45dec355f6c5e60da23a2:1": {
+      "status": "sending",
+      "batch": "dbda15b2aaf1f8c4c9ac980320c53f2405e1e3a45d9e1bc836dc39da4dbf2dcd"
+    },
+    "new:c8f341b6597ac5e44b4fee117a5d667b369a2b70d445e577ba6bb7e40632ff5f:1": {
+      "status": "sending",
+      "batch": "dbda15b2aaf1f8c4c9ac980320c53f2405e1e3a45d9e1bc836dc39da4dbf2dcd"
+    },
+    "new:75b1a047619064f4dc50fcb5863a46ed4b641673401819deeb658b74151cedd0:1": {
+      "status": "sending",
+      "batch": "dbda15b2aaf1f8c4c9ac980320c53f2405e1e3a45d9e1bc836dc39da4dbf2dcd"
+    },
+    "new:089cd04a445728464ddade62c55620563ea3da776e0717000ea0922ac1c466a5:1": {
+      "status": "sending",
+      "batch": "dbda15b2aaf1f8c4c9ac980320c53f2405e1e3a45d9e1bc836dc39da4dbf2dcd"
+    },
+    "new:3395643c98abf936db744e8fefb7374f7b3442381c80568bbbed41f61e1e96ce:1": {
+      "status": "sending",
+      "batch": "dbda15b2aaf1f8c4c9ac980320c53f2405e1e3a45d9e1bc836dc39da4dbf2dcd"
+    },
+    "new:4b1f53cac5b475bb5fbb6b5fd7cf2f4cd7539da3629e70989c52d5453c11b0a7:1": {
+      "status": "sending",
+      "batch": "dbda15b2aaf1f8c4c9ac980320c53f2405e1e3a45d9e1bc836dc39da4dbf2dcd"
+    },
+    "dbda15b2aaf1f8c4c9ac980320c53f2405e1e3a45d9e1bc836dc39da4dbf2dcd": {
+      "status": "sending",
+      "subject": "【重要】【2027推免监控】苏州大学金螳螂建筑学院发现新通知"
+    }
+  },
   "daily_reports": {},
   "health": {
     "zju-1": {
