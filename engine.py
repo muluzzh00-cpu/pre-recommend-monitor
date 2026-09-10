@@ -106,7 +106,7 @@ def run(settings,sites,clock,client,store,sender,report_dir):
                 info=classify(row['title'],detail['text'],site,settings,row['publish_date'],now) if inspect else candidate
                 eligible=allowed and info['matched'] and (not baseline or baseline_relevant(row['title'],detail['text'],info,settings))
                 item={**row,**info,**{k:site[k] for k in ('university','college','source_level')},'notes':detail['notes'],'content_hash':digest(detail['text']) if detail['text'] else None,
-                      'new_notification_eligible':eligible,'potential_new_notice':eligible and not row['publish_time'] and not baseline,
+                      'new_notification_eligible':eligible,'potential_new_notice':allowed and not row['publish_time'] and not baseline,
                       'publication_window_reason':reason,'baseline_suppressed':baseline and not eligible,
                       'needs_manual_review':info['matched'] and reason=='unknown_publication',
                       'analysis_status':'analyzed' if inspect else 'baseline' if baseline else 'outside_window' if not allowed else 'irrelevant'}

@@ -78,6 +78,12 @@ def test_today_first_seen_then_known_no_detail_no_repeat(tmp_path,cfg,site,monke
     assert restored['first_seen_time']==at().isoformat()
     assert restored['last_seen_time']==(at()+timedelta(hours=1)).isoformat()
 
+def test_date_only_potential_flag_is_separate_from_relevance(tmp_path,cfg,site,monkeypatch):
+    store,sender,detail,execute=harness(tmp_path,cfg,site,monkeypatch,[row(title='学院图书馆国庆假期开放公告')])
+    execute();saved=next(iter(store.data['notices'].values()))
+    assert saved['potential_new_notice'] and not saved['new_notification_eligible']
+    detail.assert_not_called();sender.send.assert_not_called()
+
 def test_old_future_and_outside_window_never_fetch_details(tmp_path,cfg,site,monkeypatch):
     rows=[row(1,day='2026-09-10'),row(2,stamp='2026-09-11T07:00:00+08:00'),row(3,stamp='2026-09-11T11:00:00+08:00')]
     store,sender,detail,execute=harness(tmp_path,cfg,site,monkeypatch,rows)
