@@ -31371,6 +31371,14 @@
     "1f8c27f52ac49c86f319bbc50e424fb74fe81b46f312557c6859124df71c029a": {
       "status": "sent",
       "subject": "【重要】【2027推免监控】华南理工大学建筑学院发现新通知"
+    },
+    "new:ef9e3da45b13549f262f52259d349ed36e41b9a49b312aba529425cb07826752:1": {
+      "status": "sending",
+      "batch": "fb9f4495e37c67e9b2a28e18b6fc7ce9083db19d78e9765c0bd1a893ea38034b"
+    },
+    "fb9f4495e37c67e9b2a28e18b6fc7ce9083db19d78e9765c0bd1a893ea38034b": {
+      "status": "sending",
+      "subject": "【重要】【2027推免监控】天津大学建筑工程学院发现新通知"
     }
   },
   "daily_reports": {},
