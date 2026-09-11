@@ -31120,7 +31120,7 @@
       "first_seen_time": "2026-09-11T15:26:59.787622+08:00",
       "last_seen_time": "2026-09-11T15:26:59.787622+08:00",
       "revision": 1,
-      "notified": false,
+      "notified": true,
       "reminded_72h": false,
       "reminded_24h": false,
       "reminded_6h": false,
@@ -31321,11 +31321,11 @@
       "subject": "【重要】【2027推免监控】湖南大学建筑与规划学院发现新通知"
     },
     "new:d23e88a5c5ee901281d2a25da089eeeb8d03e2a7a7c1f405db08d935fa5c576a:1": {
-      "status": "sending",
+      "status": "sent",
       "batch": "1f8c27f52ac49c86f319bbc50e424fb74fe81b46f312557c6859124df71c029a"
     },
     "1f8c27f52ac49c86f319bbc50e424fb74fe81b46f312557c6859124df71c029a": {
-      "status": "sending",
+      "status": "sent",
       "subject": "【重要】【2027推免监控】华南理工大学建筑学院发现新通知"
     }
   },
