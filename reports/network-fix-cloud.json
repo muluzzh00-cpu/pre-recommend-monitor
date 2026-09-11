@@ -1,0 +1,559 @@
+{
+  "checked_at": "2026-09-11T18:30:50.722850+08:00",
+  "lookback_minutes": 75,
+  "details_requested": 0,
+  "known_skipped": 984,
+  "new_or_updated": 0,
+  "pending_new_events": 0,
+  "http_requests": 94,
+  "email_ok": true,
+  "unresolved_deliveries": 0,
+  "recovered_sources": [],
+  "failed_sources": [],
+  "health": {
+    "zju-1": {
+      "ok": true,
+      "fetched": 40,
+      "matched": 7,
+      "known_skipped": 40,
+      "outside_window": 0,
+      "details_requested": 0,
+      "baseline": false,
+      "warnings": [],
+      "checked_at": "2026-09-11T18:30:50.722850+08:00",
+      "latest": {
+        "title": "2027年建筑工程学院招收推免生综合考核实施细则",
+        "url": "http://www.ccea.zju.edu.cn/2026/0909/c18473a3200248/page.htm",
+        "publish_date": "2026-09-09",
+        "publish_time": null
+      }
+    },
+    "zju-2": {
+      "ok": true,
+      "fetched": 30,
+      "matched": 0,
+      "known_skipped": 30,
+      "outside_window": 0,
+      "details_requested": 0,
+      "baseline": false,
+      "warnings": [],
+      "checked_at": "2026-09-11T18:30:50.722850+08:00",
+      "latest": null
+    },
+    "zju-3": {
+      "ok": true,
+      "fetched": 40,
+      "matched": 2,
+      "known_skipped": 40,
+      "outside_window": 0,
+      "details_requested": 0,
+      "baseline": false,
+      "warnings": [],
+      "checked_at": "2026-09-11T18:30:50.722850+08:00",
+      "latest": {
+        "title": "浙江大学关于接收2027年“国优计划”推荐免试硕士研究生预报名的通知",
+        "url": "http://www.grs.zju.edu.cn/yjszs/2026/0901/c28479a3198050/page.htm",
+        "publish_date": "2026-09-01",
+        "publish_time": null
+      }
+    },
+    "zju-4": {
+      "ok": true,
+      "fetched": 36,
+      "matched": 1,
+      "known_skipped": 36,
+      "outside_window": 0,
+      "details_requested": 0,
+      "baseline": false,
+      "warnings": [],
+      "checked_at": "2026-09-11T18:30:50.722850+08:00",
+      "latest": {
+        "title": "2027年多学科交叉博士研究生培养专项计划招生简章",
+        "url": "http://www.grs.zju.edu.cn/yjszs/2026/0811/c28499a3194555/page.htm",
+        "publish_date": "2026-08-11",
+        "publish_time": null
+      }
+    },
+    "nju-1": {
+      "ok": true,
+      "fetched": 40,
+      "matched": 3,
+      "known_skipped": 40,
+      "outside_window": 0,
+      "details_requested": 0,
+      "baseline": false,
+      "warnings": [],
+      "checked_at": "2026-09-11T18:30:50.722850+08:00",
+      "latest": {
+        "title": "2027年接收推荐免试研究生工作实施细则",
+        "url": "http://arch.nju.edu.cn/rcpy/yjs/pyfa/20260909/i416044.html",
+        "publish_date": "2026-09-09",
+        "publish_time": null
+      }
+    },
+    "nju-2": {
+      "ok": true,
+      "fetched": 13,
+      "matched": 2,
+      "known_skipped": 13,
+      "outside_window": 0,
+      "details_requested": 0,
+      "baseline": false,
+      "warnings": [],
+      "checked_at": "2026-09-11T18:30:50.722850+08:00",
+      "latest": {
+        "title": "2027年接收推荐免试研究生预报名通知",
+        "url": "http://arch.nju.edu.cn/rcpy/yjs/pyfa/20260803/i406983.html",
+        "publish_date": "2026-08-03",
+        "publish_time": null
+      }
+    },
+    "nju-3": {
+      "ok": true,
+      "fetched": 21,
+      "matched": 4,
+      "known_skipped": 21,
+      "outside_window": 0,
+      "details_requested": 0,
+      "baseline": false,
+      "warnings": [],
+      "checked_at": "2026-09-11T18:30:50.722850+08:00",
+      "latest": {
+        "title": "南京大学2027年接收推荐免试研究生工作办法",
+        "url": "https://yzb.nju.edu.cn/dd/df/c47868a843231/page.htm",
+        "publish_date": "2026-09-08",
+        "publish_time": null
+      }
+    },
+    "nju-4": {
+      "ok": true,
+      "fetched": 39,
+      "matched": 6,
+      "known_skipped": 39,
+      "outside_window": 0,
+      "details_requested": 0,
+      "baseline": false,
+      "warnings": [],
+      "checked_at": "2026-09-11T18:30:50.722850+08:00",
+      "latest": {
+        "title": "南京大学2027年接收推荐免试研究生工作办法",
+        "url": "https://yzb.nju.edu.cn/dd/df/c47868a843231/page.htm",
+        "publish_date": "2026-09-08",
+        "publish_time": null
+      }
+    },
+    "nju-5": {
+      "ok": true,
+      "fetched": 40,
+      "matched": 6,
+      "known_skipped": 40,
+      "outside_window": 0,
+      "details_requested": 0,
+      "baseline": false,
+      "warnings": [],
+      "checked_at": "2026-09-11T18:30:50.722850+08:00",
+      "latest": {
+        "title": "南京大学2027年接收推荐免试研究生工作办法",
+        "url": "https://yzb.nju.edu.cn/dd/df/c47868a843231/page.htm",
+        "publish_date": "2026-09-08",
+        "publish_time": null
+      }
+    },
+    "suda-1": {
+      "ok": true,
+      "fetched": 30,
+      "matched": 3,
+      "known_skipped": 30,
+      "outside_window": 0,
+      "details_requested": 0,
+      "baseline": false,
+      "warnings": [
+        "27条缺少可确认的发布时间"
+      ],
+      "checked_at": "2026-09-11T18:30:50.722850+08:00",
+      "latest": {
+        "title": "苏州大学金螳螂建筑学院关于接收2027年推荐免试研究生预报名的通知",
+        "url": "https://arch.suda.edu.cn/da/82/c5572a711298/page.htm",
+        "publish_date": null,
+        "publish_time": null
+      }
+    },
+    "suda-2": {
+      "ok": true,
+      "fetched": 36,
+      "matched": 1,
+      "known_skipped": 36,
+      "outside_window": 0,
+      "details_requested": 0,
+      "baseline": false,
+      "warnings": [
+        "36条缺少可确认的发布时间"
+      ],
+      "checked_at": "2026-09-11T18:30:50.722850+08:00",
+      "latest": {
+        "title": "关于接收2027级推荐免试研究生（含直博生）预报名的通知",
+        "url": "https://yjs.suda.edu.cn/da/52/c8386a711250/page.htm",
+        "publish_date": "2026-08-10",
+        "publish_time": null
+      }
+    },
+    "suda-3": {
+      "ok": true,
+      "fetched": 22,
+      "matched": 1,
+      "known_skipped": 22,
+      "outside_window": 0,
+      "details_requested": 0,
+      "baseline": false,
+      "warnings": [
+        "22条缺少可确认的发布时间"
+      ],
+      "checked_at": "2026-09-11T18:30:50.722850+08:00",
+      "latest": {
+        "title": "关于接收2027级推荐免试研究生（含直博生）预报名的通知",
+        "url": "https://yjs.suda.edu.cn/da/52/c8386a711250/page.htm",
+        "publish_date": "2026-08-10",
+        "publish_time": null
+      }
+    },
+    "suda-4": {
+      "ok": true,
+      "fetched": 16,
+      "matched": 0,
+      "known_skipped": 16,
+      "outside_window": 0,
+      "details_requested": 0,
+      "baseline": false,
+      "warnings": [
+        "16条缺少可确认的发布时间"
+      ],
+      "checked_at": "2026-09-11T18:30:50.722850+08:00",
+      "latest": null
+    },
+    "hnu-1": {
+      "ok": true,
+      "fetched": 31,
+      "matched": 2,
+      "known_skipped": 31,
+      "outside_window": 0,
+      "details_requested": 0,
+      "baseline": false,
+      "warnings": [
+        "1条缺少可确认的发布时间"
+      ],
+      "checked_at": "2026-09-11T18:30:50.722850+08:00",
+      "latest": {
+        "title": "建筑与规划学院2027年接收推荐免试攻读研究生 （含直博生）综合考核工作实施细则",
+        "url": "https://arch.hnu.edu.cn/info/1118/5876.htm",
+        "publish_date": "2026-09-11",
+        "publish_time": null
+      }
+    },
+    "hnu-2": {
+      "ok": true,
+      "fetched": 2,
+      "matched": 0,
+      "known_skipped": 2,
+      "outside_window": 0,
+      "details_requested": 0,
+      "baseline": false,
+      "warnings": [
+        "1条缺少可确认的发布时间"
+      ],
+      "checked_at": "2026-09-11T18:30:50.722850+08:00",
+      "latest": null
+    },
+    "hnu-3": {
+      "ok": true,
+      "fetched": 40,
+      "matched": 0,
+      "known_skipped": 40,
+      "outside_window": 0,
+      "details_requested": 0,
+      "baseline": false,
+      "warnings": [],
+      "checked_at": "2026-09-11T18:30:50.722850+08:00",
+      "latest": null
+    },
+    "hnu-4": {
+      "ok": true,
+      "fetched": 40,
+      "matched": 0,
+      "known_skipped": 40,
+      "outside_window": 0,
+      "details_requested": 0,
+      "baseline": false,
+      "warnings": [],
+      "checked_at": "2026-09-11T18:30:50.722850+08:00",
+      "latest": null
+    },
+    "hnu-5": {
+      "ok": true,
+      "fetched": 40,
+      "matched": 0,
+      "known_skipped": 40,
+      "outside_window": 0,
+      "details_requested": 0,
+      "baseline": false,
+      "warnings": [],
+      "checked_at": "2026-09-11T18:30:50.722850+08:00",
+      "latest": null
+    },
+    "scut-1": {
+      "ok": true,
+      "fetched": 26,
+      "matched": 0,
+      "known_skipped": 26,
+      "outside_window": 0,
+      "details_requested": 0,
+      "baseline": false,
+      "warnings": [],
+      "checked_at": "2026-09-11T18:30:50.722850+08:00",
+      "latest": null
+    },
+    "scut-2": {
+      "ok": true,
+      "fetched": 35,
+      "matched": 3,
+      "known_skipped": 35,
+      "outside_window": 0,
+      "details_requested": 0,
+      "baseline": false,
+      "warnings": [],
+      "checked_at": "2026-09-11T18:30:50.722850+08:00",
+      "latest": {
+        "title": "关于公布建筑学院2026年第二批博士研究生复试成绩查询及师生双选的通知",
+        "url": "https://www2.scut.edu.cn/architecture/2026/0603/c35411a628664/page.htm",
+        "publish_date": "2026-06-04",
+        "publish_time": null
+      }
+    },
+    "scut-3": {
+      "ok": true,
+      "fetched": 33,
+      "matched": 0,
+      "known_skipped": 33,
+      "outside_window": 0,
+      "details_requested": 0,
+      "baseline": false,
+      "warnings": [],
+      "checked_at": "2026-09-11T18:30:50.722850+08:00",
+      "latest": null
+    },
+    "scut-4": {
+      "ok": true,
+      "fetched": 36,
+      "matched": 4,
+      "known_skipped": 36,
+      "outside_window": 0,
+      "details_requested": 0,
+      "baseline": false,
+      "warnings": [],
+      "checked_at": "2026-09-11T18:30:50.722850+08:00",
+      "latest": {
+        "title": "华南理工大学与英国卡迪夫大学联合培养双硕士学位项目2027年招生简章",
+        "url": "https://yz.scut.edu.cn/2026/0911/c30111a635057/page.htm",
+        "publish_date": "2026-09-11",
+        "publish_time": null
+      }
+    },
+    "scut-5": {
+      "ok": true,
+      "fetched": 35,
+      "matched": 1,
+      "known_skipped": 35,
+      "outside_window": 0,
+      "details_requested": 0,
+      "baseline": false,
+      "warnings": [],
+      "checked_at": "2026-09-11T18:30:50.722850+08:00",
+      "latest": {
+        "title": "华南理工大学接收2027年推荐免试研究生预报名通知",
+        "url": "https://yz.scut.edu.cn/2026/0828/c30112a633884/page.htm",
+        "publish_date": "2026-08-28",
+        "publish_time": null
+      }
+    },
+    "tju-1": {
+      "ok": true,
+      "fetched": 40,
+      "matched": 2,
+      "known_skipped": 40,
+      "outside_window": 0,
+      "details_requested": 0,
+      "baseline": false,
+      "warnings": [
+        "40条缺少可确认的发布时间"
+      ],
+      "checked_at": "2026-09-11T18:30:50.722850+08:00",
+      "latest": {
+        "title": "天津大学建筑工程学院2027年推荐优秀应届本科毕业生免试攻读硕士学位研究生和直接攻读博士学位研究生招生录取工作办法",
+        "url": "https://jgxy.tju.edu.cn/info/1047/38071.htm",
+        "publish_date": "2026-09-11",
+        "publish_time": null
+      }
+    },
+    "tju-2": {
+      "ok": true,
+      "fetched": 40,
+      "matched": 3,
+      "known_skipped": 40,
+      "outside_window": 0,
+      "details_requested": 0,
+      "baseline": false,
+      "warnings": [
+        "40条缺少可确认的发布时间"
+      ],
+      "checked_at": "2026-09-11T18:30:50.722850+08:00",
+      "latest": {
+        "title": "天津大学建筑工程学院2027年推荐优秀应届本科毕业生免试攻读硕士学位研究生和直接攻读博士学位研究生招生录取工作办法",
+        "url": "https://jgxy.tju.edu.cn/info/1047/38071.htm",
+        "publish_date": "2026-09-11",
+        "publish_time": null
+      }
+    },
+    "tju-3": {
+      "ok": true,
+      "fetched": 21,
+      "matched": 3,
+      "known_skipped": 21,
+      "outside_window": 0,
+      "details_requested": 0,
+      "baseline": false,
+      "warnings": [
+        "21条缺少可确认的发布时间"
+      ],
+      "checked_at": "2026-09-11T18:30:50.722850+08:00",
+      "latest": {
+        "title": "关于调整我校2027年硕士研究生招生单独考试相关专业初试科目的通知",
+        "url": "https://yzb.tju.edu.cn/xwzx/tkss_xw/202607/t20260714_324677.htm",
+        "publish_date": "2026-07-14",
+        "publish_time": null
+      }
+    },
+    "tju-4": {
+      "ok": true,
+      "fetched": 21,
+      "matched": 1,
+      "known_skipped": 21,
+      "outside_window": 0,
+      "details_requested": 0,
+      "baseline": false,
+      "warnings": [
+        "21条缺少可确认的发布时间"
+      ],
+      "checked_at": "2026-09-11T18:30:50.722850+08:00",
+      "latest": {
+        "title": "【2027推免生接收篇】天津大学2027年直博生报名系统开通",
+        "url": "https://yzb.tju.edu.cn/xwzx/tkbs_xw/202609/t20260901_324691.htm",
+        "publish_date": "2026-09-01",
+        "publish_time": null
+      }
+    },
+    "tju-5": {
+      "ok": true,
+      "fetched": 21,
+      "matched": 2,
+      "known_skipped": 21,
+      "outside_window": 0,
+      "details_requested": 0,
+      "baseline": false,
+      "warnings": [
+        "21条缺少可确认的发布时间"
+      ],
+      "checked_at": "2026-09-11T18:30:50.722850+08:00",
+      "latest": {
+        "title": "天津大学2027年推荐优秀应届本科毕业生免试攻读硕士学位和直接攻读博士学位研究生招生录取工作办法",
+        "url": "https://yzb.tju.edu.cn/xwzx/zxxx/202609/t20260908_324696.htm",
+        "publish_date": "2026-09-08",
+        "publish_time": null
+      }
+    },
+    "whu-1": {
+      "ok": true,
+      "fetched": 40,
+      "matched": 1,
+      "known_skipped": 40,
+      "outside_window": 0,
+      "details_requested": 0,
+      "baseline": false,
+      "warnings": [
+        "40条缺少可确认的发布时间"
+      ],
+      "checked_at": "2026-09-11T18:30:50.722850+08:00",
+      "latest": {
+        "title": "09月 02 城市设计学院2027年接收攻读硕士学位推免生预报名的通知",
+        "url": "https://sud.whu.edu.cn/info/1521/51191.htm",
+        "publish_date": "2026-09-02",
+        "publish_time": null
+      }
+    },
+    "whu-2": {
+      "ok": true,
+      "fetched": 1,
+      "matched": 0,
+      "known_skipped": 1,
+      "outside_window": 0,
+      "details_requested": 0,
+      "baseline": false,
+      "warnings": [],
+      "checked_at": "2026-09-11T18:30:50.722850+08:00",
+      "latest": null
+    },
+    "whu-3": {
+      "ok": true,
+      "fetched": 3,
+      "matched": 0,
+      "known_skipped": 3,
+      "outside_window": 0,
+      "details_requested": 0,
+      "baseline": false,
+      "warnings": [],
+      "checked_at": "2026-09-11T18:30:50.722850+08:00",
+      "latest": null
+    },
+    "whu-4": {
+      "ok": true,
+      "fetched": 24,
+      "matched": 0,
+      "known_skipped": 24,
+      "outside_window": 0,
+      "details_requested": 0,
+      "baseline": false,
+      "warnings": [],
+      "checked_at": "2026-09-11T18:30:50.722850+08:00",
+      "latest": null
+    },
+    "whu-5": {
+      "ok": true,
+      "fetched": 12,
+      "matched": 0,
+      "known_skipped": 12,
+      "outside_window": 0,
+      "details_requested": 0,
+      "baseline": false,
+      "warnings": [],
+      "checked_at": "2026-09-11T18:30:50.722850+08:00",
+      "latest": null
+    },
+    "whu-6": {
+      "ok": true,
+      "fetched": 40,
+      "matched": 1,
+      "known_skipped": 40,
+      "outside_window": 0,
+      "details_requested": 0,
+      "baseline": false,
+      "warnings": [
+        "40条缺少可确认的发布时间"
+      ],
+      "checked_at": "2026-09-11T18:30:50.722850+08:00",
+      "latest": {
+        "title": "07月 10 城市设计学院“研究生学术创新奖”评选实施细则",
+        "url": "https://sud.whu.edu.cn/info/1511/41091.htm",
+        "publish_date": "2026-07-10",
+        "publish_time": null
+      }
+    }
+  }
+}
