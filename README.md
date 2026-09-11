@@ -191,6 +191,10 @@ python -m pytest -q
 
 退出码：0 表示完成；2 表示部分页面故障/邮件待核实；1 表示配置或整体运行失败。时间窗口之外返回 0，且不创建 HTTP/SMTP 客户端。
 
+网络恢复：单次 HTTP 请求已有有限重试；首次遍历后，连接失败/超时的配置来源再延后补抓一次（`recover_connection_failures: true`、`recovery_delay_seconds: 10`）。只补抓失败来源，不重跑整轮或重发邮件。403、证书错误、robots 禁止、解析错误不因此增加补抓。补抓成功仍保留初次故障在当天日报；仍失败则退出 2，并在 Actions Annotations 中明确列出失败来源。`Network is unreachable` 可能来自云端执行器到学校的临时网络问题，程序不能保证外部网络必定恢复。
+
+三个工作流已使用 Node.js 24 版本的 `actions/checkout@v5`、`actions/setup-python@v6`、`actions/upload-artifact@v6`。checkout v5 保留当前状态分支恢复脚本需要的 Git 认证配置方式。
+
 ## 13. 增删页面、改关键词
 
 编辑 `config/sites.yaml`：复制同校条目，给新条目不同 `id`，修改 `page_name`、`list_url`、`domain` 和经过测试的选择器。`source_level` 必须为 `college` 或 `university`。`university_domain` 限制所有链接留在该大学。删除条目或设 `enabled: false` 即暂停该页；不要为掩盖故障而禁用必要的唯一核心源。

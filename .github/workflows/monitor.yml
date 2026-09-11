@@ -19,8 +19,8 @@ jobs:
     runs-on: ubuntu-latest
     timeout-minutes: 55
     steps:
-      - uses: actions/checkout@v4
-      - uses: actions/setup-python@v5
+      - uses: actions/checkout@v5
+      - uses: actions/setup-python@v6
         with:
           python-version: '3.12'
       - name: Check time before dependency/network setup
@@ -53,7 +53,7 @@ jobs:
           fi
       - name: Save reports even on partial failure
         if: always() && steps.window.outputs.active == 'true'
-        uses: actions/upload-artifact@v4
+        uses: actions/upload-artifact@v6
         with:
           name: monitor-report-${{ github.run_number }}
           path: logs/

@@ -12,6 +12,8 @@ monitoring:
 crawler:
   timeout_seconds: 18
   retries: 2
+  recover_connection_failures: true
+  recovery_delay_seconds: 10
   interval_seconds: 1.2
   max_list_pages: 3
   max_notices_per_source: 40

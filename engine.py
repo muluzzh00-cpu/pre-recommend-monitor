@@ -1,4 +1,6 @@
-import json, logging
+import json, logging, time
+from collections import deque
+import requests
 from pathlib import Path
 from datetime import datetime
 from crawlers.generic import GenericCrawler, canonical
@@ -29,9 +31,9 @@ def record_daily_health(store,health,now):
     daily=store.data.setdefault('daily_stats',{}).setdefault(day,{'runs':0,'failures':{}})
     daily['runs']+=1;daily['last_run_at']=now.isoformat()
     for key,stats in health.items():
-        if not stats['ok']:
+        if not stats['ok'] or stats.get('initial_error'):
             failure=daily['failures'].setdefault(key,{'count':0,'first_failed_at':now.isoformat()})
-            failure.update(count=failure['count']+1,last_failed_at=now.isoformat(),error=stats.get('error','未知故障'))
+            failure.update(count=failure['count']+1,last_failed_at=now.isoformat(),error=stats.get('error') or stats.get('initial_error','未知故障'),recovered=stats['ok'])
 
 def delivery(store,sender,key,subject,html,on_success):
     existing=store.data['deliveries'].get(key)
@@ -53,13 +55,21 @@ def run(settings,sites,clock,client,store,sender,report_dir):
     if settings['monitoring']['initial_scan_mode']!='baseline':raise ValueError('initial_scan_mode must be baseline')
     policy=initialize_policy(store,sites,now)
     titles={title_identity(x['university'],x['title']):k for k,x in store.data['notices'].items()}
-    for site in sites:
+    queue=deque((site,False) for site in sites)
+    while queue:
+        site,recovery=queue.popleft()
         if not site['enabled']:continue
         clock.guard()
+        previous=health.get(site['id'],{}) if recovery else {}
+        if recovery:
+            # One late recovery pass for connection failures only; never replay successful sources.
+            time.sleep(settings['crawler'].get('recovery_delay_seconds',10));clock.guard()
         crawler=CUSTOM.get(site['crawler_type'],GenericCrawler)(site,client)
         baseline=site['id'] not in policy['baseline_sources']
         stats={'ok':False,'fetched':0,'matched':0,'known_skipped':0,'outside_window':0,'details_requested':0,
                'baseline':baseline,'warnings':[],'checked_at':now.isoformat(),'latest':None}
+        if recovery:
+            stats['initial_error']=previous['error'];stats['recovery_attempted']=True
         try:
             rows=crawler.crawl()[:site.get('max_notices',settings['crawler']['max_notices_per_source'])]; stats['fetched']=len(rows)
             for row in rows:
@@ -135,6 +145,14 @@ def run(settings,sites,clock,client,store,sender,report_dir):
             # Do not print arbitrary remote response bodies or credentials.
             stats['error']=type(exc).__name__+': '+str(exc)[:350]
             logging.warning('%s: %s',site['id'],stats['error'])
+            if (not recovery and settings['crawler'].get('recover_connection_failures',True)
+                    and isinstance(exc,(requests.ConnectionError,requests.Timeout))
+                    and not isinstance(exc,requests.exceptions.SSLError)):
+                queue.append((site,True))
+        if recovery and stats['ok']:
+            stats['recovered']=True
+            stats['warnings'].append('本轮首次连接失败，延后补抓已恢复；故障保留在当天记录')
+            logging.info('%s recovered after temporary connection failure',site['id'])
         health[site['id']]=stats
         logging.info('%s fetched=%s matched=%s ok=%s',site['id'],stats['fetched'],stats['matched'],stats['ok'])
     store.data['health']=health;record_daily_health(store,health,now); store.save(); clock.guard()
@@ -192,7 +210,9 @@ def run(settings,sites,clock,client,store,sender,report_dir):
     report={'checked_at':now.isoformat(),'lookback_minutes':settings['monitoring']['lookback_minutes'],
             'details_requested':sum(s['details_requested'] for s in health.values()),
             'known_skipped':sum(s['known_skipped'] for s in health.values()),
-            'new_or_updated':discovered,'pending_new_events':len(pending),'http_requests':client.requests_count,'email_ok':mail_ok,'unresolved_deliveries':unresolved,'health':health}
+            'new_or_updated':discovered,'pending_new_events':len(pending),'http_requests':client.requests_count,'email_ok':mail_ok,'unresolved_deliveries':unresolved,
+            'recovered_sources':[key for key,value in health.items() if value.get('recovered')],
+            'failed_sources':[key for key,value in health.items() if not value['ok']],'health':health}
     out=Path(report_dir);out.mkdir(parents=True,exist_ok=True)
     (out/'latest.json').write_text(json.dumps(report,ensure_ascii=False,indent=2),encoding='utf-8')
     (out/'health.html').write_text(render_health(health,sites,store.data,now,settings),encoding='utf-8')
