@@ -31319,6 +31319,14 @@
     "13ffefa36bf30e494d1a351ef8e612a13cdac81bf7b22b75673b4ada70b016e4": {
       "status": "sent",
       "subject": "【重要】【2027推免监控】湖南大学建筑与规划学院发现新通知"
+    },
+    "new:d23e88a5c5ee901281d2a25da089eeeb8d03e2a7a7c1f405db08d935fa5c576a:1": {
+      "status": "sending",
+      "batch": "1f8c27f52ac49c86f319bbc50e424fb74fe81b46f312557c6859124df71c029a"
+    },
+    "1f8c27f52ac49c86f319bbc50e424fb74fe81b46f312557c6859124df71c029a": {
+      "status": "sending",
+      "subject": "【重要】【2027推免监控】华南理工大学建筑学院发现新通知"
     }
   },
   "daily_reports": {},
