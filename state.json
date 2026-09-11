@@ -31275,6 +31275,14 @@
     "dbda15b2aaf1f8c4c9ac980320c53f2405e1e3a45d9e1bc836dc39da4dbf2dcd": {
       "status": "sent",
       "subject": "【重要】【2027推免监控】苏州大学金螳螂建筑学院发现新通知"
+    },
+    "new:c7d425e0a21277ab2d95e46f5fae1d03bc46e3fc2872678263d7b6b0fa45b2c2:1": {
+      "status": "sending",
+      "batch": "13ffefa36bf30e494d1a351ef8e612a13cdac81bf7b22b75673b4ada70b016e4"
+    },
+    "13ffefa36bf30e494d1a351ef8e612a13cdac81bf7b22b75673b4ada70b016e4": {
+      "status": "sending",
+      "subject": "【重要】【2027推免监控】湖南大学建筑与规划学院发现新通知"
     }
   },
   "daily_reports": {},
