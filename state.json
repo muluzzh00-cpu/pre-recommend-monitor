@@ -31203,7 +31203,7 @@
       "first_seen_time": "2026-09-11T18:26:57.973318+08:00",
       "last_seen_time": "2026-09-11T18:26:57.973318+08:00",
       "revision": 1,
-      "notified": false,
+      "notified": true,
       "reminded_72h": false,
       "reminded_24h": false,
       "reminded_6h": false,
@@ -31420,11 +31420,11 @@
       "subject": "【重要】【2027推免监控】天津大学建筑工程学院发现新通知"
     },
     "new:a360e42bb231573ddb646b41ed8f54fe0f2e86f6abac8a92c838c19c0960f01d:1": {
-      "status": "sending",
+      "status": "sent",
       "batch": "129535d6bb68525452da75a5957261202415bccf4715994a64d4906cf5be6fa5"
     },
     "129535d6bb68525452da75a5957261202415bccf4715994a64d4906cf5be6fa5": {
-      "status": "sending",
+      "status": "sent",
       "subject": "【重要】【2027推免监控】华南理工大学建筑学院发现新通知"
     }
   },
