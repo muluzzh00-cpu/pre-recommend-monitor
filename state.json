@@ -31504,6 +31504,14 @@
     "daily-2026-09-11": {
       "status": "sent",
       "subject": "【2027推免监控日报】2026-09-11"
+    },
+    "new:466bd297ea4821d3f66023ae64a3e0addfd64be7176f8779c7c99ffc2ab66f60:1": {
+      "status": "sending",
+      "batch": "87b46851a1060a9da2f3bce0658271c19b98b7ff8a2951a252675c37ebd6cbd7"
+    },
+    "87b46851a1060a9da2f3bce0658271c19b98b7ff8a2951a252675c37ebd6cbd7": {
+      "status": "sending",
+      "subject": "【重要】【2027推免监控】浙江大学建筑工程学院发现新通知"
     }
   },
   "daily_reports": {
