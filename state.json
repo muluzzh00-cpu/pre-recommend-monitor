@@ -31665,6 +31665,14 @@
     "daily-2026-09-12": {
       "status": "sent",
       "subject": "【2027推免监控日报】2026-09-12"
+    },
+    "new:9859c12d2817ec368a73e11aa04c04e866fa68257e2a7d01f193de5099f94323:1": {
+      "status": "sending",
+      "batch": "00a08d601f4dd1b29779c10ece61bd53f5387d9bf76fd6eed1a37418d2b2d622"
+    },
+    "00a08d601f4dd1b29779c10ece61bd53f5387d9bf76fd6eed1a37418d2b2d622": {
+      "status": "sending",
+      "subject": "【重要】【2027推免监控】天津大学建筑工程学院发现新通知"
     }
   },
   "daily_reports": {
