@@ -31714,6 +31714,14 @@
     "00a08d601f4dd1b29779c10ece61bd53f5387d9bf76fd6eed1a37418d2b2d622": {
       "status": "sent",
       "subject": "【重要】【2027推免监控】天津大学建筑工程学院发现新通知"
+    },
+    "new:cb32a29c33ee4e13da35fe8ede5b2404199926ed544af49afa1e0d91ac756cd4:1": {
+      "status": "sending",
+      "batch": "45971fb4112ee026f7862e9c28303acf39a955099e00f092c25fa4f6df9f4c41"
+    },
+    "45971fb4112ee026f7862e9c28303acf39a955099e00f092c25fa4f6df9f4c41": {
+      "status": "sending",
+      "subject": "【重要】【2027推免监控】南京大学建筑与城市规划学院发现新通知"
     }
   },
   "daily_reports": {
