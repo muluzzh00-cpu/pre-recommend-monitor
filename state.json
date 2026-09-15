@@ -31506,8 +31506,8 @@
       "first_seen_time": "2026-09-15T09:29:02.273858+08:00",
       "last_seen_time": "2026-09-15T09:29:02.273858+08:00",
       "revision": 1,
-      "notified": false,
-      "reminded_72h": false,
+      "notified": true,
+      "reminded_72h": true,
       "reminded_24h": false,
       "reminded_6h": false,
       "signature": "91d849e2db7983949cc287eb51da8a33c5c5b566cdf4285d7fb737195d1fb4e0"
@@ -31767,11 +31767,11 @@
       "subject": "【2027推免监控日报】2026-09-14"
     },
     "new:51b8cd721061f79efa6a9d7e7540664823d21d818143717f86822e9ee1d98be7:1": {
-      "status": "sending",
+      "status": "sent",
       "batch": "5d5984de3ce78a378cac9ad42ee04565d201a529970572f29fb3141454d7ca88"
     },
     "5d5984de3ce78a378cac9ad42ee04565d201a529970572f29fb3141454d7ca88": {
-      "status": "sending",
+      "status": "sent",
       "subject": "【紧急】【2027推免监控】浙江大学建筑工程学院报名即将截止"
     }
   },
