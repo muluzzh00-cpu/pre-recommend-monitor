@@ -31510,7 +31510,7 @@
       "revision": 1,
       "notified": true,
       "reminded_72h": true,
-      "reminded_24h": false,
+      "reminded_24h": true,
       "reminded_6h": false,
       "signature": "91d849e2db7983949cc287eb51da8a33c5c5b566cdf4285d7fb737195d1fb4e0"
     },
@@ -31853,11 +31853,11 @@
       "subject": "【紧急】【2027推免监控】浙江大学建筑工程学院报名即将截止"
     },
     "e781a3d8090dbcc9206e428448a78652968f8f460cad42c33c5369d98836f599": {
-      "status": "sending",
+      "status": "sent",
       "batch": "7dc80f909c16a0e44437a951178b2b4fa821d760ccd19b15dae0c4831d54e360"
     },
     "7dc80f909c16a0e44437a951178b2b4fa821d760ccd19b15dae0c4831d54e360": {
-      "status": "sending",
+      "status": "sent",
       "subject": "【非常紧急】【2027推免监控】报名/材料即将截止"
     }
   },
