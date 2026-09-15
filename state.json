@@ -31765,6 +31765,14 @@
     "daily-2026-09-14": {
       "status": "sent",
       "subject": "【2027推免监控日报】2026-09-14"
+    },
+    "new:51b8cd721061f79efa6a9d7e7540664823d21d818143717f86822e9ee1d98be7:1": {
+      "status": "sending",
+      "batch": "5d5984de3ce78a378cac9ad42ee04565d201a529970572f29fb3141454d7ca88"
+    },
+    "5d5984de3ce78a378cac9ad42ee04565d201a529970572f29fb3141454d7ca88": {
+      "status": "sending",
+      "subject": "【紧急】【2027推免监控】浙江大学建筑工程学院报名即将截止"
     }
   },
   "daily_reports": {
