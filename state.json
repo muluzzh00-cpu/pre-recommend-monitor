@@ -31859,6 +31859,10 @@
     "7dc80f909c16a0e44437a951178b2b4fa821d760ccd19b15dae0c4831d54e360": {
       "status": "sent",
       "subject": "【非常紧急】【2027推免监控】报名/材料即将截止"
+    },
+    "daily-2026-09-15": {
+      "status": "sending",
+      "subject": "【2027推免监控日报】2026-09-15"
     }
   },
   "daily_reports": {
