@@ -31511,7 +31511,7 @@
       "notified": true,
       "reminded_72h": true,
       "reminded_24h": true,
-      "reminded_6h": false,
+      "reminded_6h": true,
       "signature": "91d849e2db7983949cc287eb51da8a33c5c5b566cdf4285d7fb737195d1fb4e0"
     },
     "1b8004e843e2827050103717ac743d843aa01a1cafe268e6754027bcc6993649": {
@@ -31865,11 +31865,11 @@
       "subject": "【2027推免监控日报】2026-09-15"
     },
     "e5cbcde089b512c3305e889679e76133389d4441728a9bc7493abd0c5e6fb987": {
-      "status": "sending",
+      "status": "sent",
       "batch": "eaa881e62ecacf9b172fc2c0b8c1705bd49aa76e3a1f1510a48d15f4a3f7f770"
     },
     "eaa881e62ecacf9b172fc2c0b8c1705bd49aa76e3a1f1510a48d15f4a3f7f770": {
-      "status": "sending",
+      "status": "sent",
       "subject": "【非常紧急】【2027推免监控】报名/材料即将截止"
     }
   },
