@@ -31622,7 +31622,7 @@
       "first_seen_time": "2026-09-16T10:26:45.842483+08:00",
       "last_seen_time": "2026-09-16T10:26:45.842483+08:00",
       "revision": 1,
-      "notified": false,
+      "notified": true,
       "reminded_72h": false,
       "reminded_24h": false,
       "reminded_6h": false,
@@ -31911,11 +31911,11 @@
       "subject": "【非常紧急】【2027推免监控】报名/材料即将截止"
     },
     "new:5c23233f6a1412c4fd4821496c10586bd8b1d623786ce086deaf764312799035:1": {
-      "status": "sending",
+      "status": "sent",
       "batch": "d51a9b2147896f62a7144f6a28e508388a8b2daa2a2beb5ce1730f3d66c92c6d"
     },
     "d51a9b2147896f62a7144f6a28e508388a8b2daa2a2beb5ce1730f3d66c92c6d": {
-      "status": "sending",
+      "status": "sent",
       "subject": "【重要】【2027推免监控】浙江大学建筑工程学院发现新通知"
     }
   },
