@@ -31996,6 +31996,10 @@
     "daily-2026-09-16": {
       "status": "sent",
       "subject": "【2027推免监控日报】2026-09-16"
+    },
+    "daily-2026-09-17": {
+      "status": "sending",
+      "subject": "【2027推免监控日报】2026-09-17"
     }
   },
   "daily_reports": {
