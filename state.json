@@ -31737,7 +31737,7 @@
       "first_seen_time": "2026-09-18T09:24:41.335747+08:00",
       "last_seen_time": "2026-09-18T09:24:41.335747+08:00",
       "revision": 1,
-      "notified": false,
+      "notified": true,
       "reminded_72h": false,
       "reminded_24h": false,
       "reminded_6h": false,
@@ -32042,11 +32042,11 @@
       "subject": "【2027推免监控日报】2026-09-17"
     },
     "new:6c659e17e7081c5e16a9ef007c94d41a8b900c393947fd93ad462a17e7309786:1": {
-      "status": "sending",
+      "status": "sent",
       "batch": "b471d63287c8d41edd85233eec582bd2f26f9095584a06b5840173b54da28f67"
     },
     "b471d63287c8d41edd85233eec582bd2f26f9095584a06b5840173b54da28f67": {
-      "status": "sending",
+      "status": "sent",
       "subject": "【重要】【2027推免监控】武汉大学城市设计学院发现新通知"
     }
   },
