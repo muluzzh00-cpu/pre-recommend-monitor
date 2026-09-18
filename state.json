@@ -32040,6 +32040,14 @@
     "daily-2026-09-17": {
       "status": "sent",
       "subject": "【2027推免监控日报】2026-09-17"
+    },
+    "new:6c659e17e7081c5e16a9ef007c94d41a8b900c393947fd93ad462a17e7309786:1": {
+      "status": "sending",
+      "batch": "b471d63287c8d41edd85233eec582bd2f26f9095584a06b5840173b54da28f67"
+    },
+    "b471d63287c8d41edd85233eec582bd2f26f9095584a06b5840173b54da28f67": {
+      "status": "sending",
+      "subject": "【重要】【2027推免监控】武汉大学城市设计学院发现新通知"
     }
   },
   "daily_reports": {
