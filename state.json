@@ -32052,6 +32052,10 @@
     "daily-2026-09-18": {
       "status": "sent",
       "subject": "【2027推免监控日报】2026-09-18"
+    },
+    "daily-2026-09-19": {
+      "status": "sending",
+      "subject": "【2027推免监控日报】2026-09-19"
     }
   },
   "daily_reports": {
