@@ -31814,7 +31814,7 @@
       "first_seen_time": "2026-09-21T10:26:34.842012+08:00",
       "last_seen_time": "2026-09-21T10:26:34.842012+08:00",
       "revision": 1,
-      "notified": false,
+      "notified": true,
       "reminded_72h": false,
       "reminded_24h": false,
       "reminded_6h": false,
@@ -32139,11 +32139,11 @@
       "subject": "【2027推免监控日报】2026-09-20"
     },
     "new:7fbfc6f0e3a028a79285c2aa7b6c7e12da432def4046c9c6318b4a379ca18ce3:1": {
-      "status": "sending",
+      "status": "sent",
       "batch": "16e77b583597866349ebff3ad8716e2868a21e0da48ccf326c5ba7e7a3950714"
     },
     "16e77b583597866349ebff3ad8716e2868a21e0da48ccf326c5ba7e7a3950714": {
-      "status": "sending",
+      "status": "sent",
       "subject": "【重要】【2027推免监控】华南理工大学建筑学院发现新通知"
     }
   },
