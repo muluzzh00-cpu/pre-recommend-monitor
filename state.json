@@ -32038,7 +32038,7 @@
       "first_seen_time": "2026-09-24T18:26:51.856262+08:00",
       "last_seen_time": "2026-09-24T18:26:51.856262+08:00",
       "revision": 1,
-      "notified": false,
+      "notified": true,
       "reminded_72h": false,
       "reminded_24h": false,
       "reminded_6h": false,
@@ -32386,11 +32386,11 @@
       "subject": "【2027推免监控日报】2026-09-23"
     },
     "new:212c92a8948889e9bd8eec34efa8b45cc894de232cf1994315b0ca45ecbf0a95:1": {
-      "status": "sending",
+      "status": "sent",
       "batch": "64538a287c7795d2345dda542b3cc3d58800eaaf4d25280a3b3187dbe629a430"
     },
     "64538a287c7795d2345dda542b3cc3d58800eaaf4d25280a3b3187dbe629a430": {
-      "status": "sending",
+      "status": "sent",
       "subject": "【重要】【2027推免监控】南京大学建筑与城市规划学院发现新通知"
     }
   },
